@@ -69,7 +69,7 @@ export default function Header() {
                   />
                 </SheetTitle>
               </SheetHeader>
-              <div className="flex flex-col gap-4 mt-6 px-5 overflow-y-auto">
+              <div className="flex flex-col gap-4 px-5 overflow-y-auto">
                 <span className="text-xs font-bold uppercase text-muted-foreground">
                   Categories
                 </span>
@@ -87,7 +87,7 @@ export default function Header() {
                 </Button>
               </div>
               <SheetFooter>
-                <div className="w-full flex justify-end py-4 mt-4">
+                <div className="w-full flex justify-end">
                   <ThemeToggle />
                 </div>
               </SheetFooter>
@@ -97,7 +97,8 @@ export default function Header() {
 
         {/* Logo */}
         <div className="shrink-0">
-          <Image
+          <Link href="/">
+            <Image
             src="/kinobdlogo.svg"
             alt="Kinobd Logo"
             width={130}
@@ -105,6 +106,7 @@ export default function Header() {
             className="lg:w-40"
             priority
           />
+          </Link>
         </div>
 
         {/* Desktop Search Bar */}
@@ -171,7 +173,7 @@ export default function Header() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <div
-                  className="flex items-center gap-3 cursor-pointer 
+                  className="flex items-center gap-2 cursor-pointer 
                 border border-transparent hover:border-zinc-300 lg:px-5 py-1 rounded-lg"
                 >
                   <button className="h-8 w-8 lg:h-10 lg:w-10 relative outline-none">
