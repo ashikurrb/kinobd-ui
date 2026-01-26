@@ -9,10 +9,12 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
+  DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { 
   Sheet, 
   SheetContent, 
+  SheetFooter, 
   SheetHeader, 
   SheetTitle, 
   SheetTrigger 
@@ -49,7 +51,7 @@ export default function Header() {
       {/* Top Section */}
       <div className="flex items-center justify-between px-4 py-3 lg:px-20 lg:py-4 max-w-480 mx-auto">
         
-        {/* Mobile Menu Trigger*/}
+        {/* Mobile Menu Trigger */}
         <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -57,25 +59,31 @@ export default function Header() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-75 sm:w-100">
-              <SheetHeader className="text-left border-b pb-4">
+            <SheetContent side="right" className="w-75 sm:w-100 flex flex-col">
+              <SheetHeader className="text-left border-b pb-4 flex-row items-center justify-between">
                 <SheetTitle className="flex items-center gap-2">
                    <Image src="/kinobdlogo.svg" alt="Logo" width={100} height={30} />
                 </SheetTitle>
+              
               </SheetHeader>
-              <div className="flex flex-col gap-4 mt-6 px-5">
+              <div className="flex flex-col gap-4 mt-6 px-5 overflow-y-auto">
                 <span className="text-xs font-bold uppercase text-muted-foreground">Categories</span>
                 {navLinks.map((link) => (
                   <Link 
                     key={link.name} 
                     href={link.href} 
-                    className="text-lg font-medium hover:text-[#21b1ad] py-2 border-b border-zinc-100"
+                    className="text-lg font-medium hover:text-[#21b1ad] py-2 border-b border-zinc-100 dark:border-zinc-800"
                   >
                     {link.name}
                   </Link>
                 ))}
-                <Button className="mt-4 bg-[#112d2a] w-full">Track My Order</Button>
+                <Button className="mt-4 bg-[#112d2a] w-full dark:text-white">Track My Order</Button>
               </div>
+              <SheetFooter>
+                  <div className="w-full flex justify-end py-4 mt-4">
+                  <ThemeToggle />
+                </div>
+                </SheetFooter>
             </SheetContent>
           </Sheet>
         </div>
@@ -105,7 +113,7 @@ export default function Header() {
           <Input
             type="text"
             placeholder="Search for products..."
-            className="flex-1 border-0 focus-visible:ring-0 focus-visible:ring-offset-0 h-full text-zinc-600 bg-transparent"
+            className="flex-1 border-0 focus-visible:ring-0 focus-visible:ring-offset-0 h-full text-zinc-600 dark:text-zinc-300 bg-transparent"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
@@ -115,56 +123,76 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Desktop Actions & Icons */}
+        {/* Desktop & Mobile Actions */}
         <div className="flex items-center gap-3 lg:gap-6">
           <button 
             className="lg:hidden p-2" 
             onClick={() => setIsMobileSearchOpen(!isMobileSearchOpen)}
           >
-            <Search className="h-5 w-5 text-zinc-700" />
+            <Search className="h-5 w-5 text-zinc-700 dark:text-zinc-300" />
           </button>
 
           <div className="relative cursor-pointer group">
-            <ShoppingBag className="h-5 w-5 lg:h-6 lg:w-6 text-zinc-700" />
-            <span className="absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] text-white text-[9px] lg:text-[10px] font-bold h-3.5 w-3.5 lg:h-4 lg:w-4 flex items-center justify-center rounded-full border-2 border-white">
+            <ShoppingBag className="h-5 w-5 lg:h-6 lg:w-6 text-zinc-700 dark:text-zinc-300" />
+            <span className="absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] text-white text-[9px] lg:text-[10px] font-bold h-3.5 w-3.5 lg:h-4 lg:w-4 flex items-center justify-center rounded-full border-2 border-white dark:border-zinc-950">
               1
             </span>
           </div>
 
           <div className="relative cursor-pointer group hidden sm:block">
-            <Heart className="h-5 w-5 lg:h-6 lg:w-6 text-zinc-700" />
-            <span className="absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] text-white text-[9px] lg:text-[10px] font-bold h-3.5 w-3.5 lg:h-4 lg:w-4 flex items-center justify-center rounded-full border-2 border-white">
+            <Heart className="h-5 w-5 lg:h-6 lg:w-6 text-zinc-700 dark:text-zinc-300" />
+            <span className="absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] text-white text-[9px] lg:text-[10px] font-bold h-3.5 w-3.5 lg:h-4 lg:w-4 flex items-center justify-center rounded-full border-2 border-white dark:border-zinc-950">
               1
             </span>
           </div>
 
-          {/* User Profile - Mobile */}
+          {/* User Profile - Mobile & Desktop */}
           <div className="flex items-center gap-2 lg:gap-3 lg:pl-4 lg:border-l lg:border-zinc-200 h-10">
-            <div className="h-8 w-8 lg:h-10 lg:w-10 relative">
-              <Image src="/demoAvatar.png" alt="User" fill className="rounded-full border border-zinc-100 object-cover" />
-            </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="h-8 w-8 lg:h-10 lg:w-10 relative outline-none">
+                  <Image src="/demoAvatar.png" alt="User" fill className="rounded-full border border-zinc-100 object-cover" />
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" className="w-48">
+                <div className="px-2 py-1.5 text-sm lg:hidden font-bold text-zinc-800 dark:text-zinc-200">
+                  John Doe
+                </div>
+                <DropdownMenuSeparator className="lg:hidden" />
+                <DropdownMenuItem className="cursor-pointer">
+                  <User className="mr-2 h-4 w-4" /> Profile
+                </DropdownMenuItem>
+                <DropdownMenuItem className="cursor-pointer text-red-600 focus:text-red-600">
+                  <LogOut className="mr-2 h-4 w-4" /> Logout
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            {/* Desktop Only Labels */}
             <div className="hidden lg:flex items-center gap-2 text-sm">
-              <span className="font-bold text-zinc-800">John Doe</span>
+              <span className="font-bold text-zinc-800 dark:text-zinc-200">John Doe</span>
               <span className="text-zinc-400">|</span>
               <button className="text-[#21b1ad] font-bold hover:underline">Logout</button>
             </div>
           </div>
+
           <div className="hidden lg:block">
             <ThemeToggle />
           </div>
         </div>
       </div>
 
+      {/* Mobile Search Input*/}
       {isMobileSearchOpen && (
         <div className="lg:hidden px-4 pb-3 animate-in slide-in-from-top duration-200">
           <div className="flex items-center border rounded-full overflow-hidden h-10">
-             <Input className="border-0 focus-visible:ring-0" placeholder="Search..." />
-             <Button className="bg-[#21b1ad] rounded-none h-full"><Search className="h-4 w-4"/></Button>
+              <Input className="border-0 focus-visible:ring-0" placeholder="Search..." />
+              <Button className="bg-[#21b1ad] rounded-none h-full"><Search className="h-4 w-4"/></Button>
           </div>
         </div>
       )}
 
-      {/* Bottom Section: Navigation Bar (Hidden on Mobile) */}
+      {/* Bottom Nav */}
       <div className="hidden lg:block bg-[#112d2a] text-white w-full">
         <div className="flex items-center justify-between px-20 py-3 max-w-480 mx-auto">
           <nav className="flex items-center gap-1">
@@ -182,7 +210,6 @@ export default function Header() {
               </div>
             ))}
           </nav>
-
           <Button 
             variant="outline" 
             className="border-white/40 bg-transparent hover:bg-white hover:text-[#112d2a] text-white text-xs font-bold rounded-lg px-4 h-8"
