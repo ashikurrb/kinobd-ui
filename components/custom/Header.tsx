@@ -171,8 +171,6 @@ export default function Header() {
             {/* Desktop Only Labels */}
             <div className="hidden lg:flex items-center gap-2 text-sm">
               <span className="font-bold text-zinc-800 dark:text-zinc-200">John Doe</span>
-              <span className="text-zinc-400">|</span>
-              <button className="text-[#21b1ad] font-bold hover:underline">Logout</button>
             </div>
           </div>
 
