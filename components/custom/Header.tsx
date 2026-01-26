@@ -1,0 +1,196 @@
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { 
+  Sheet, 
+  SheetContent, 
+  SheetHeader, 
+  SheetTitle, 
+  SheetTrigger 
+} from "@/components/ui/sheet";
+import { 
+  ChevronDown, 
+  ShoppingBag, 
+  Heart, 
+  Search, 
+  Menu, 
+  User, 
+  LogOut 
+} from "lucide-react";
+import { ThemeToggle } from "../ui/theme-toggle";
+
+export default function Header() {
+  const [selectedOption, setSelectedOption] = useState("All");
+  const [query, setQuery] = useState("");
+  const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Electronic", href: "/electronic" },
+    { name: "Apparel", href: "/apparel" },
+    { name: "Home Appliance", href: "/appliances" },
+    { name: "Gadget", href: "/gadgets" },
+    { name: "Grocery", href: "/grocery" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  return (
+    <header className="w-full bg-white dark:bg-zinc-950 sticky top-0 z-50 shadow-sm">
+      {/* Top Section */}
+      <div className="flex items-center justify-between px-4 py-3 lg:px-20 lg:py-4 max-w-480 mx-auto">
+        
+        {/* Mobile Menu Trigger*/}
+        <div className="lg:hidden">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-75 sm:w-100">
+              <SheetHeader className="text-left border-b pb-4">
+                <SheetTitle className="flex items-center gap-2">
+                   <Image src="/kinobdlogo.svg" alt="Logo" width={100} height={30} />
+                </SheetTitle>
+              </SheetHeader>
+              <div className="flex flex-col gap-4 mt-6 px-5">
+                <span className="text-xs font-bold uppercase text-muted-foreground">Categories</span>
+                {navLinks.map((link) => (
+                  <Link 
+                    key={link.name} 
+                    href={link.href} 
+                    className="text-lg font-medium hover:text-[#21b1ad] py-2 border-b border-zinc-100"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+                <Button className="mt-4 bg-[#112d2a] w-full">Track My Order</Button>
+              </div>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        {/* Logo */}
+        <div className="shrink-0">
+          <Image src="/kinobdlogo.svg" alt="Kinobd Logo" width={130} height={40} className="lg:w-40" priority />
+        </div>
+
+        {/* Desktop Search Bar */}
+        <div className="hidden lg:flex items-center flex-1 max-w-2xl mx-10 border border-zinc-200 dark:border-zinc-800 rounded-full h-11 overflow-hidden">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="rounded-none border-r px-4 h-full hover:bg-zinc-50 flex gap-2 text-zinc-600">
+                {selectedOption} <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              {["All", "Articles", "Products", "Users"].map((option) => (
+                <DropdownMenuItem key={option} onClick={() => setSelectedOption(option)}>
+                  {option}
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Input
+            type="text"
+            placeholder="Search for products..."
+            className="flex-1 border-0 focus-visible:ring-0 focus-visible:ring-offset-0 h-full text-zinc-600 bg-transparent"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+
+          <Button className="bg-[#21b1ad] hover:bg-[#1a9a96] text-white rounded-none h-full px-6 flex gap-2 font-medium">
+            <Search className="h-4 w-4" /> Search
+          </Button>
+        </div>
+
+        {/* Desktop Actions & Icons */}
+        <div className="flex items-center gap-3 lg:gap-6">
+          <button 
+            className="lg:hidden p-2" 
+            onClick={() => setIsMobileSearchOpen(!isMobileSearchOpen)}
+          >
+            <Search className="h-5 w-5 text-zinc-700" />
+          </button>
+
+          <div className="relative cursor-pointer group">
+            <ShoppingBag className="h-5 w-5 lg:h-6 lg:w-6 text-zinc-700" />
+            <span className="absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] text-white text-[9px] lg:text-[10px] font-bold h-3.5 w-3.5 lg:h-4 lg:w-4 flex items-center justify-center rounded-full border-2 border-white">
+              1
+            </span>
+          </div>
+
+          <div className="relative cursor-pointer group hidden sm:block">
+            <Heart className="h-5 w-5 lg:h-6 lg:w-6 text-zinc-700" />
+            <span className="absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] text-white text-[9px] lg:text-[10px] font-bold h-3.5 w-3.5 lg:h-4 lg:w-4 flex items-center justify-center rounded-full border-2 border-white">
+              1
+            </span>
+          </div>
+
+          {/* User Profile - Mobile */}
+          <div className="flex items-center gap-2 lg:gap-3 lg:pl-4 lg:border-l lg:border-zinc-200 h-10">
+            <div className="h-8 w-8 lg:h-10 lg:w-10 relative">
+              <Image src="/demoAvatar.png" alt="User" fill className="rounded-full border border-zinc-100 object-cover" />
+            </div>
+            <div className="hidden lg:flex items-center gap-2 text-sm">
+              <span className="font-bold text-zinc-800">John Doe</span>
+              <span className="text-zinc-400">|</span>
+              <button className="text-[#21b1ad] font-bold hover:underline">Logout</button>
+            </div>
+          </div>
+          <div className="hidden lg:block">
+            <ThemeToggle />
+          </div>
+        </div>
+      </div>
+
+      {isMobileSearchOpen && (
+        <div className="lg:hidden px-4 pb-3 animate-in slide-in-from-top duration-200">
+          <div className="flex items-center border rounded-full overflow-hidden h-10">
+             <Input className="border-0 focus-visible:ring-0" placeholder="Search..." />
+             <Button className="bg-[#21b1ad] rounded-none h-full"><Search className="h-4 w-4"/></Button>
+          </div>
+        </div>
+      )}
+
+      {/* Bottom Section: Navigation Bar (Hidden on Mobile) */}
+      <div className="hidden lg:block bg-[#112d2a] text-white w-full">
+        <div className="flex items-center justify-between px-20 py-3 max-w-480 mx-auto">
+          <nav className="flex items-center gap-1">
+            {navLinks.map((link, idx) => (
+              <div key={link.name} className="flex items-center">
+                <Link 
+                  href={link.href} 
+                  className={`text-sm font-semibold hover:text-[#21b1ad] transition-colors px-2 ${link.name === "Home" ? "text-white" : "text-zinc-300"}`}
+                >
+                  {link.name}
+                </Link>
+                {idx !== navLinks.length - 1 && (
+                  <span className="text-zinc-600 mx-2 text-xs">|</span>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          <Button 
+            variant="outline" 
+            className="border-white/40 bg-transparent hover:bg-white hover:text-[#112d2a] text-white text-xs font-bold rounded-lg px-4 h-8"
+          >
+            Track My Order
+          </Button>
+        </div>
+      </div>
+    </header>
+  );
+}
