@@ -27,6 +27,7 @@ import {
   Menu,
   User,
   LogOut,
+  LocateFixed,
 } from "lucide-react";
 import { ThemeToggle } from "../ui/theme-toggle";
 
@@ -83,12 +84,14 @@ export default function Header() {
                   </Link>
                 ))}
                 <Button className="mt-4 bg-[#112d2a] w-full dark:text-white">
-                  Track My Order
+          <LocateFixed />  Track My Order
                 </Button>
               </div>
               <SheetFooter>
                 <div className="w-full flex justify-between items-center">
-                  <span className="text-sm font-semibold">&copy; {new Date().getFullYear()} kinobd.com </span>
+                  <span className="text-sm font-semibold">
+                    &copy; {new Date().getFullYear()} kinobd.com{" "}
+                  </span>
                   <ThemeToggle />
                 </div>
               </SheetFooter>
@@ -142,8 +145,10 @@ export default function Header() {
             onChange={(e) => setQuery(e.target.value)}
           />
 
-          <Button className="bg-[#21b1ad] hover:bg-[#1a9a96] text-white rounded-none h-full 
-          px-6 flex gap-2 font-medium cursor-pointer">
+          <Button
+            className="bg-[#21b1ad] hover:bg-[#1a9a96] text-white rounded-none h-full 
+          px-6 flex gap-2 font-medium cursor-pointer"
+          >
             <Search className="h-4 w-4" /> Search
           </Button>
         </div>
@@ -177,14 +182,15 @@ export default function Header() {
               <DropdownMenuTrigger asChild>
                 <div
                   className="flex items-center gap-2 cursor-pointer 
-                border border-transparent hover:border-zinc-300 lg:px-5 py-1 rounded-lg"
+                border border-transparent hover:border-zinc-300 
+                transition-colors duration-300 lg:px-5 py-1 rounded-lg"
                 >
                   <button className="h-8 w-8 lg:h-10 lg:w-10 relative outline-none">
                     <Image
                       src="/demoAvatar.png"
                       alt="User"
                       fill
-                      className="rounded-full border border-zinc-100 object-cover"
+                      className="rounded-full object-cover cursor-pointer"
                     />
                   </button>
                   <div className="hidden lg:flex items-center gap-2 text-sm">
@@ -199,11 +205,15 @@ export default function Header() {
                   John Doe
                 </div>
                 <DropdownMenuSeparator className="lg:hidden" />
+                  <Link href={"/dashboard/profile"}>
                 <DropdownMenuItem className="cursor-pointer">
-                  <User className="h-4 w-4" /> Profile
+                    <User className="h-4 w-4" /> Profile
                 </DropdownMenuItem>
+                  </Link>
                 <DropdownMenuItem className="cursor-pointer text-red-600 focus:text-red-600">
-                  <LogOut className="h-4 w-4" /> Logout
+                  <button className="flex items-center gap-2 cursor-pointer">
+                    <LogOut className="h-4 w-4" /> Logout
+                  </button>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -251,7 +261,7 @@ export default function Header() {
             variant="outline"
             className="border-white/40 bg-transparent hover:bg-white hover:text-[#112d2a] dark:hover:text-white text-white text-xs font-bold rounded-lg px-4 h-8 cursor-pointer"
           >
-            Track My Order
+          <LocateFixed />  Track My Order
           </Button>
         </div>
       </div>
