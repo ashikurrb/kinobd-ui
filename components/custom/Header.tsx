@@ -30,6 +30,7 @@ import {
   LocateFixed,
 } from "lucide-react";
 import { ThemeToggle } from "../ui/theme-toggle";
+import { Badge } from "../ui/badge";
 
 export default function Header() {
   const [selectedOption, setSelectedOption] = useState("All");
@@ -84,7 +85,7 @@ export default function Header() {
                   </Link>
                 ))}
                 <Button className="mt-4 bg-[#112d2a] w-full dark:text-white">
-          <LocateFixed />  Track My Order
+                  <LocateFixed /> Track My Order
                 </Button>
               </div>
               <SheetFooter>
@@ -163,17 +164,23 @@ export default function Header() {
           </button>
 
           <div className="relative cursor-pointer group">
-            <ShoppingBag className="h-5 w-5 lg:h-6 lg:w-6 text-zinc-700 dark:text-zinc-300" />
-            <span className="absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] text-white text-[9px] lg:text-[10px] font-bold h-3.5 w-3.5 lg:h-4 lg:w-4 flex items-center justify-center rounded-full border-2 border-white dark:border-zinc-950">
+            <ShoppingBag className="h-5 w-5 lg:h-7 lg:w-7 text-zinc-700 dark:text-zinc-300" />
+            <Badge
+              variant="secondary"
+              className="bg-yellow-500 absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 rounded-full"
+            >
               1
-            </span>
+            </Badge>
           </div>
 
           <div className="relative cursor-pointer group hidden sm:block">
-            <Heart className="h-5 w-5 lg:h-6 lg:w-6 text-zinc-700 dark:text-zinc-300" />
-            <span className="absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] text-white text-[9px] lg:text-[10px] font-bold h-3.5 w-3.5 lg:h-4 lg:w-4 flex items-center justify-center rounded-full border-2 border-white dark:border-zinc-950">
+            <Heart className="h-5 w-5 lg:h-7 lg:w-7 text-zinc-700 dark:text-zinc-300" />
+            <Badge
+              variant="secondary"
+              className="absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] rounded-full"
+            >
               1
-            </span>
+            </Badge>
           </div>
 
           {/* User Profile - Mobile & Desktop */}
@@ -205,11 +212,11 @@ export default function Header() {
                   John Doe
                 </div>
                 <DropdownMenuSeparator className="lg:hidden" />
-                  <Link href={"/dashboard/profile"}>
-                <DropdownMenuItem className="cursor-pointer">
+                <Link href={"/dashboard/profile"}>
+                  <DropdownMenuItem className="cursor-pointer">
                     <User className="h-4 w-4" /> Profile
-                </DropdownMenuItem>
-                  </Link>
+                  </DropdownMenuItem>
+                </Link>
                 <DropdownMenuItem className="cursor-pointer text-red-600 focus:text-red-600">
                   <button className="flex items-center gap-2 cursor-pointer">
                     <LogOut className="h-4 w-4" /> Logout
@@ -261,7 +268,7 @@ export default function Header() {
             variant="outline"
             className="border-white/40 bg-transparent hover:bg-white hover:text-[#112d2a] dark:hover:text-white text-white text-xs font-bold rounded-lg px-4 h-8 cursor-pointer"
           >
-          <LocateFixed />  Track My Order
+            <LocateFixed /> Track My Order
           </Button>
         </div>
       </div>
