@@ -31,7 +31,7 @@ export default function HomeHero() {
   const dealsOfTheDay = [
     {
       name: "Rechargeable Wireless Mouse",
-      img: "/banner/mouse.jpg",
+      img: "/banner/mouse.png",
       price: "120",
       rating: 4,
       lastTime: "2026-01-29T12:25:40.310+00:00",
@@ -50,7 +50,10 @@ export default function HomeHero() {
           >
             <CarouselContent>
               {carouselItems.map((item, index) => (
-                <CarouselItem key={index} className="relative h-80 md:h-100 lg:h-112.5">
+                <CarouselItem
+                  key={index}
+                  className="relative h-80 md:h-100 lg:h-112.5"
+                >
                   <Image
                     src={item.img}
                     alt="Hero Banner"
@@ -60,7 +63,13 @@ export default function HomeHero() {
                   />
                   <div className="absolute inset-0 flex flex-col justify-center px-6 md:px-12 space-y-3 md:space-y-4 bg-black/5 dark:bg-black/40">
                     <p className="text-xs md:text-sm font-medium flex items-center gap-2 text-slate-800 dark:text-orange-400">
-                      <span className="w-4 h-4 md:w-5 md:h-5 bg-black dark:bg-orange-500 rounded-full inline-block" />
+                      <Image
+                        src="/icon.svg"
+                        alt="Kinobd Logo"
+                        width={20}
+                        height={20}
+                        className="inline-block"
+                      />
                       Welcome to Kinobd
                     </p>
                     <h1 className="text-3xl md:text-5xl font-bold text-slate-800 dark:text-white leading-tight">
@@ -70,12 +79,15 @@ export default function HomeHero() {
                       Everythings in one place
                     </p>
                     <div className="flex flex-wrap gap-3 md:gap-4 pt-2">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-5 md:px-8 py-4 md:py-6">
+                      <Button
+                        className="bg-orange-500 hover:bg-orange-600 text-white 
+                      rounded-full px-5 md:px-8 py-4 md:py-6 cursor-pointer"
+                      >
                         Shop New Arrival
                       </Button>
                       <Button
                         variant="outline"
-                        className="rounded-full px-5 md:px-8 py-4 md:py-6 border-slate-300 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 dark:text-white"
+                        className="rounded-full px-5 md:px-8 py-4 md:py-6 border-slate-300 dark:border-slate-700 bg-white/80 dark:bg-slate-800/80 dark:text-white cursor-pointer"
                       >
                         Explore Collections
                       </Button>
@@ -86,14 +98,22 @@ export default function HomeHero() {
             </CarouselContent>
           </Carousel>
 
-          {/* Trust Cards - FIXED DARK MODE BG */}
+          {/* Trust Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {[
-              { title: "Secure Payment", desc: "Each and every payment is 100% secured", img: "/lock.png" },
-              { title: "Original Products", desc: "100% authentic products guaranteed", img: "/originalseal.png" }
+              {
+                title: "Secure Payment",
+                desc: "Each and every payment is 100% secured",
+                img: "/lock.png",
+              },
+              {
+                title: "Original Products",
+                desc: "100% authentic products guaranteed",
+                img: "/originalseal.png",
+              },
             ].map((card, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className="flex flex-col bg-[url('/layer.png')] dark:bg-none bg-slate-50 dark:bg-slate-900 bg-cover bg-center border border-slate-100 dark:border-slate-800 rounded-sm overflow-hidden transition-colors"
               >
                 <div className="flex gap-4 md:gap-6 items-center justify-center px-6 py-8">
@@ -105,8 +125,12 @@ export default function HomeHero() {
                     className="object-contain md:w-16 md:h-16 dark:brightness-200 dark:contrast-100"
                   />
                   <div>
-                    <h3 className="text-base md:text-lg font-bold dark:text-white">{card.title}</h3>
-                    <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400">{card.desc}</p>
+                    <h3 className="text-base md:text-lg font-bold dark:text-white">
+                      {card.title}
+                    </h3>
+                    <p className="text-xs md:text-sm text-slate-600 dark:text-slate-400">
+                      {card.desc}
+                    </p>
                   </div>
                 </div>
                 <h3 className="text-red-600 dark:text-red-400 text-xs md:text-sm font-medium cursor-pointer flex items-center gap-1 justify-end pb-4 px-6 hover:underline">
@@ -117,21 +141,33 @@ export default function HomeHero() {
           </div>
         </div>
 
-        {/* Right Column: Deal of the Day - FIXED STRETCHING */}
+        {/*  Deal of the Day  */}
         <div className="lg:col-span-4 border border-teal-100 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-lg p-6 flex flex-col items-center shadow-sm h-full">
-          <h2 className="text-xl md:text-2xl font-bold mb-6 dark:text-white">Deal of the Day</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-6 dark:text-white">
+            Deal of the Day
+          </h2>
           {dealsOfTheDay.map((deal, idx) => (
-            <div key={idx} className="flex flex-col items-center justify-between h-full w-full">
+            <div
+              key={idx}
+              className="flex flex-col items-center justify-between h-full w-full"
+            >
               <Countdown
                 date={dayjs(deal.lastTime).toDate()}
                 renderer={({ days, hours, minutes, seconds, completed }) => (
                   <div className="flex gap-2 md:gap-3 mb-6">
                     {[
-                      { v: days, l: "Day" }, { v: hours, l: "Hour" }, 
-                      { v: minutes, l: "Min" }, { v: seconds, l: "Sec" }
+                      { v: days, l: "Day" },
+                      { v: hours, l: "Hour" },
+                      { v: minutes, l: "Min" },
+                      { v: seconds, l: "Sec" },
                     ].map((t, i) => (
-                      <div key={i} className="bg-orange-500 text-white w-12 h-14 flex flex-col items-center justify-center rounded-md">
-                        <span className="text-lg font-bold">{zeroPad(t.v)}</span>
+                      <div
+                        key={i}
+                        className="bg-orange-500 text-white w-12 h-14 flex flex-col items-center justify-center rounded-md"
+                      >
+                        <span className="text-lg font-bold">
+                          {zeroPad(t.v)}
+                        </span>
                         <span className="text-[9px] uppercase">{t.l}</span>
                       </div>
                     ))}
@@ -139,7 +175,7 @@ export default function HomeHero() {
                 )}
               />
 
-              <div className="relative w-full max-w-[220px] mb-4 group">
+              <div className="relative w-full max-w-55 mb-4 group">
                 <Image
                   src={deal.img}
                   alt={deal.name}
@@ -155,7 +191,8 @@ export default function HomeHero() {
                     {deal.name}
                   </h3>
                   <div className="flex text-orange-400 text-lg">
-                    {"★".repeat(deal.rating)}{"☆".repeat(5 - deal.rating)}
+                    {"★".repeat(deal.rating)}
+                    {"☆".repeat(5 - deal.rating)}
                   </div>
                 </div>
 
@@ -163,12 +200,12 @@ export default function HomeHero() {
                   <span className="text-teal-600 dark:text-teal-400 font-bold text-xl">
                     {deal.price}.00৳
                   </span>
-                  <Button className="bg-slate-900 dark:bg-orange-500 hover:bg-slate-800 dark:hover:bg-orange-600 text-white text-xs h-9 px-4">
-                    <ShoppingCart size={14} className="mr-2" /> Buy Now
+                  <Button className="bg-slate-900 dark:bg-orange-500 hover:bg-slate-800 dark:hover:bg-orange-600 text-white text-xs h-9 px-4 font-bold cursor-pointer">
+                    <ShoppingCart size={14} /> Buy Now
                   </Button>
                 </div>
-                
-                <div className="pt-4 border-t dark:border-slate-800 flex justify-end">
+
+                <div className="pt-4 dark:border-slate-800 flex justify-end">
                   <button className="text-sm text-slate-500 dark:text-slate-400 hover:text-orange-500 flex items-center gap-2">
                     View All <ArrowUpRightFromSquareIcon size={13} />
                   </button>
