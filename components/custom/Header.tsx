@@ -164,20 +164,20 @@ export default function Header() {
           </button>
 
           <div className="relative cursor-pointer group">
-            <ShoppingBag className="h-5 w-5 lg:h-7 lg:w-7 text-zinc-700 dark:text-zinc-300" />
+            <ShoppingBag className="h-7 w-7 text-zinc-700 dark:text-zinc-300" />
             <Badge
               variant="secondary"
-              className="bg-yellow-500 absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 rounded-full"
+              className="bg-yellow-500 absolute lg:px-2 px-1.5 -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 rounded-full"
             >
               1
             </Badge>
           </div>
 
           <div className="relative cursor-pointer group hidden sm:block">
-            <Heart className="h-5 w-5 lg:h-7 lg:w-7 text-zinc-700 dark:text-zinc-300" />
+            <Heart className="h-7 w-7 text-zinc-700 dark:text-zinc-300" />
             <Badge
               variant="secondary"
-              className="absolute -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] rounded-full"
+              className="absolute lg:px-2 px-1.5 -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] rounded-full"
             >
               1
             </Badge>
