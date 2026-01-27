@@ -142,7 +142,7 @@ export default function HomeFeatured() {
 "
                   >
                     {/* Left Content */}
-                    <div className="w-full md:w-3/5 p-8 flex flex-col justify-center">
+                    <div className="w-full md:w-3/5 p-8 flex flex-col justify-center order-2 md:order-1">
                       <h3 className="text-2xl font-bold text-[#1a2d2e] dark:text-white mb-4 leading-tight">
                         {product.name}
                       </h3>
@@ -184,7 +184,7 @@ export default function HomeFeatured() {
                     </div>
 
                     {/* Right Image */}
-                    <div className="w-full md:w-2/5 relative flex items-center justify-center p-6 lg:p-12 z-10">
+                    <div className="w-full md:w-2/5 relative flex items-center justify-center p-6 lg:p-12 z-10 order-1 md:order-2">
                       <div className="relative w-full aspect-square max-w-80">
                         <Image
                           src={product.img}
