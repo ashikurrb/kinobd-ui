@@ -245,7 +245,7 @@ export default function HomeFeatured() {
                 <SwiperSlide key={product.id}>
                   <Card className="rounded-sm shadow-none group py-4 min-h-[41vh]">
                     <CardHeader>
-                      <div className="relative aspect-square mx-auto w-1/2 lg:w-full dark:bg-transparent flex items-center justify-center">
+                      <div className="relative aspect-square mx-auto w-1/2 lg:w-full py-5 lg:py-0 flex items-center justify-center">
                         <Image
                           src={product.img}
                           alt={product.name}
