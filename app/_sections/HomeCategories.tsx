@@ -97,13 +97,13 @@ export default function HomeCategories() {
 
         <div className="flex gap-2">
           <button
-            id="new-arrival-prev"
+            id="prev-btn"
             className="w-8 h-8 flex items-center justify-center bg-[#1a2d2e] text-white hover:bg-opacity-90 transition-all cursor-pointer"
           >
             <ChevronLeft size={20} />
           </button>
           <button
-            id="new-arrival-next"
+            id="next-btn"
             className="w-8 h-8 flex items-center justify-center bg-[#ff781f] text-white hover:bg-opacity-90 transition-all cursor-pointer"
           >
             <ChevronRight size={20} />
