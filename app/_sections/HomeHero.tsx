@@ -114,7 +114,7 @@ export default function HomeHero() {
             ].map((card, i) => (
               <div
                 key={i}
-                className="flex flex-col bg-[url('/layer.png')] dark:bg-none bg-slate-50 dark:bg-slate-900 bg-cover bg-center border border-slate-100 dark:border-slate-800 rounded-sm overflow-hidden transition-colors"
+                className="flex flex-col bg-[url('/layer.png')] dark:bg-none bg-slate-50 dark:bg-[#171717] bg-cover bg-center border border-slate-100 dark:border-slate-800 rounded-sm overflow-hidden transition-colors"
               >
                 <div className="flex gap-4 md:gap-6 items-center justify-center px-6 py-8">
                   <Image
@@ -142,7 +142,7 @@ export default function HomeHero() {
         </div>
 
         {/*  Deal of the Day  */}
-        <div className="lg:col-span-4 border border-teal-100 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-lg p-6 flex flex-col items-center shadow-sm h-full">
+        <div className="lg:col-span-4 border border-teal-100 dark:border-slate-800 bg-white dark:bg-[#171717] rounded-lg p-6 flex flex-col items-center shadow-sm h-full">
           <h2 className="text-xl md:text-2xl font-bold mb-6 dark:text-white">
             Deal of the Day
           </h2>
