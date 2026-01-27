@@ -266,7 +266,8 @@ export default function Header() {
           </nav>
           <Button
             variant="outline"
-            className="border-white/40 bg-transparent hover:bg-white hover:text-[#112d2a] dark:hover:text-white text-white text-xs font-bold rounded-lg px-4 h-8 cursor-pointer"
+            className="border-white/40 bg-transparent hover:bg-orange-600 
+            hover:text-white text-xs font-bold rounded-lg px-4 h-8 cursor-pointer"
           >
             <LocateFixed /> Track My Order
           </Button>
