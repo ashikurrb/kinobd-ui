@@ -101,10 +101,9 @@ export default function HomeFeatured() {
         <div>
           {/* Header Section */}
           <div className="flex justify-between items-end mb-6">
-            <h2 className="text-2xl font-semibold text-[#1a2d2e] dark:text-white">
+            <h2 className="text-2xl font-bold text-[#1a2d2e] dark:text-white">
               Featured Products
             </h2>
-
             <div className="flex gap-2 mb-1">
               <button
                 id="featured-prev"
@@ -122,7 +121,7 @@ export default function HomeFeatured() {
           </div>
 
           {/* Slider Section */}
-          <div className="relative">
+          <div className="relative min-h-[41vh]">
             <Swiper
               modules={[Navigation]}
               spaceBetween={30}
@@ -244,7 +243,7 @@ export default function HomeFeatured() {
             >
               {featuredProducts.map((product) => (
                 <SwiperSlide key={product.id}>
-                  <Card className="rounded-sm shadow-none group py-4">
+                  <Card className="rounded-sm shadow-none group py-4 min-h-[41vh]">
                     <CardHeader>
                       <div className="relative aspect-square w-full dark:bg-transparent bg-[#f3f4f6] flex items-center justify-center">
                         <Image
