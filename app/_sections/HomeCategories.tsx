@@ -90,27 +90,26 @@ export default function HomeCategories() {
   return (
     <div className="lg:px-10 xl:px-20 px-5 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
       {/* Header with Navigation Arrows */}
-      <div className="flex justify-between items-center mb-8">
-        <h2 className="text-2xl font-semibold">Categories</h2>
+      <div className="flex justify-between items-end mb-6">
+        <h2 className="text-2xl font-bold text-[#1a2d2e] dark:text-white">
+          Categories
+        </h2>
+
         <div className="flex gap-2">
-          {/* Custom Navigation IDs */}
           <button
-            id="prev-btn"
-            className="p-1 bg-[#1a2d2e] text-white rounded-sm 
-            hover:bg-slate-700 transition-colors disabled:opacity-50 cursor-pointer"
+            id="new-arrival-prev"
+            className="w-8 h-8 flex items-center justify-center bg-[#1a2d2e] text-white hover:bg-opacity-90 transition-all cursor-pointer"
           >
             <ChevronLeft size={20} />
           </button>
           <button
-            id="next-btn"
-            className="p-1 bg-[#ff7a21] text-white rounded-sm 
-            hover:bg-orange-600 transition-colors disabled:opacity-50 cursor-pointer"
+            id="new-arrival-next"
+            className="w-8 h-8 flex items-center justify-center bg-[#ff781f] text-white hover:bg-opacity-90 transition-all cursor-pointer"
           >
             <ChevronRight size={20} />
           </button>
         </div>
       </div>
-
       {/* Swiper Slider */}
       <Swiper
         modules={[Navigation]}
