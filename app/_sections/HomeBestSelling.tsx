@@ -154,7 +154,7 @@ export default function HomeBestSelling() {
                 value="best-selling"
                 className="text-lg lg:text-2xl font-bold text-[#1a2d2e] dark:text-white lg:py-5 py-4 rounded-md
                data-[state=active]:bg-[#ff781f]  data-[state=active]:text-white
-               dark:data-[state=active]:bg-[#ff781f]  dark:data-[state=active]:text-white"
+               dark:data-[state=active]:bg-[#ff781f]  dark:data-[state=active]:text-white cursor-pointer"
               >
                 Best Selling
               </TabsTrigger>
@@ -162,7 +162,7 @@ export default function HomeBestSelling() {
                 value="best-review"
                 className="text-lg lg:text-2xl font-bold text-[#1a2d2e] dark:text-white lg:py-5 py-4 rounded-md
                data-[state=active]:bg-[#ff781f] data-[state=active]:text-white
-                dark:data-[state=active]:bg-[#ff781f]  dark:data-[state=active]:text-white"
+                dark:data-[state=active]:bg-[#ff781f]  dark:data-[state=active]:text-white cursor-pointer"
               >
                 Best Review
               </TabsTrigger>
