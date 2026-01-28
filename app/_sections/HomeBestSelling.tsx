@@ -41,7 +41,7 @@ const ProductSlider = ({ products }: { products: Product[] }) => (
   <Swiper
     modules={[Navigation]}
     spaceBetween={15}
-    slidesPerView={1}
+    slidesPerView={2}
     breakpoints={{
       640: { slidesPerView: 2 },
       1024: { slidesPerView: 6 },
@@ -98,7 +98,7 @@ const ProductSlider = ({ products }: { products: Product[] }) => (
             </h3>
           </CardContent>
 
-          <CardFooter className="flex justify-between gap-6 px-4 mt-auto">
+          <CardFooter className="flex justify-between lg:gap-6 gap-3 px-4 mt-auto">
             <Button className="flex-1 bg-[#1a2d2e] hover:bg-[#2a3d3e] text-white rounded-sm text-xs gap-2 px-2 cursor-pointer">
               <ShoppingCart size={16} />
               Add to Cart
@@ -148,7 +148,7 @@ export default function HomeBestSelling() {
             <TabsList className="bg-transparent flex gap-2">
               <TabsTrigger
                 value="best-selling"
-                className="text-2xl font-bold text-[#1a2d2e] dark:text-white py-5 rounded-md
+                className="text-lg lg:text-2xl font-bold text-[#1a2d2e] dark:text-white lg:py-5 py-4 rounded-md
                data-[state=active]:bg-[#ff781f]  data-[state=active]:text-white
                dark:data-[state=active]:bg-[#ff781f]  dark:data-[state=active]:text-white"
               >
@@ -156,7 +156,7 @@ export default function HomeBestSelling() {
               </TabsTrigger>
               <TabsTrigger
                 value="best-review"
-                className="text-2xl font-bold text-[#1a2d2e] dark:text-white py-5 rounded-md
+                className="text-lg lg:text-2xl font-bold text-[#1a2d2e] dark:text-white lg:py-5 py-4 rounded-md
                data-[state=active]:bg-[#ff781f] data-[state=active]:text-white
                 dark:data-[state=active]:bg-[#ff781f]  dark:data-[state=active]:text-white"
               >
