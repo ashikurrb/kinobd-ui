@@ -104,25 +104,25 @@ export default function HomeFeatured() {
                       </h3>
 
                       <div className="flex items-center gap-1 mb-6">
-                          {[...Array(5)].map((_, i) => {
-                            const isFilled = i < Math.floor(product.rating);
+                        {[...Array(5)].map((_, i) => {
+                          const isFilled = i < Math.floor(product.rating);
 
-                            return (
-                              <Star
-                                key={i}
-                                size={14}
-                                className={
-                                  isFilled
-                                    ? "fill-orange-400 text-orange-400"
-                                    : "text-orange-400 opacity-40"
-                                }
-                              />
-                            );
-                          })}
+                          return (
+                            <Star
+                              key={i}
+                              size={14}
+                              className={
+                                isFilled
+                                  ? "fill-orange-400 text-orange-400"
+                                  : "text-orange-400 opacity-40"
+                              }
+                            />
+                          );
+                        })}
 
-                          <span className="ml-2 text-xs text-gray-500 font-medium">
-                            {product.rating}
-                          </span>
+                        <span className="ml-2 text-xs text-gray-500 font-medium">
+                          {product.rating}
+                        </span>
                       </div>
 
                       <ul className="space-y-2 mb-10 grow">
@@ -172,6 +172,7 @@ export default function HomeFeatured() {
           </div>
         </div>
 
+        {/* New Arraivals */}
         <div className="flex flex-col h-full">
           <div className="flex justify-between items-end mb-6">
             <h2 className="text-2xl font-bold text-[#1a2d2e] dark:text-white">

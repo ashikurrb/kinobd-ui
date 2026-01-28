@@ -1,3 +1,4 @@
+import HomeBestSelling from "./_sections/HomeBestSelling";
 import HomeCategories from "./_sections/HomeCategories";
 import HomeFeatured from "./_sections/HomeFeatured";
 import HomeHero from "./_sections/HomeHero";
@@ -9,6 +10,7 @@ export default function Home() {
       <HomeHero/>
       <HomeCategories/>
       <HomeFeatured/>
+      <HomeBestSelling/>
     </div>
   );
 }
