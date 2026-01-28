@@ -21,10 +21,17 @@ import {
 } from "@/components/ui/card";
 import axios from "axios";
 import { toast } from "sonner";
+
+//define type
 interface Product {
   id: string;
   featuredProduct: boolean;
   newArrival: boolean;
+  name: string;
+  img: string;
+  price: number;
+  rating: number;
+  features: string[];
 }
 
 export default function HomeFeatured() {
