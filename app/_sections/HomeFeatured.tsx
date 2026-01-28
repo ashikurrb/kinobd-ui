@@ -127,7 +127,7 @@ export default function HomeFeatured() {
                       </div>
 
                       <ul className="space-y-2 mb-10">
-                        {product.features.map((feature: [], i) => (
+                        {product.features.map((feature: string, i) => (
                           <li
                             key={i}
                             className="flex items-start gap-3 text-gray-700 dark:text-gray-300 font-medium"
