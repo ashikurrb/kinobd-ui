@@ -13,6 +13,7 @@ import {
   ArrowUpRightFromSquareIcon,
   ShoppingCart,
   SquareArrowOutUpRight,
+  Star,
 } from "lucide-react";
 import Countdown, { zeroPad } from "react-countdown";
 import dayjs from "dayjs";
@@ -196,15 +197,32 @@ export default function HomeHero() {
                   <h3 className="text-slate-700 dark:text-slate-200 font-bold text-sm md:text-base leading-tight">
                     {deal.name}
                   </h3>
-                  <div className="flex text-orange-400 text-lg">
-                    {"★".repeat(deal.rating)}
-                    {"☆".repeat(5 - deal.rating)}
+                  <div className="flex items-center gap-1 mt-5">
+                    {[...Array(5)].map((_, i) => {
+                      const isFilled = i < Math.floor(deal.rating);
+
+                      return (
+                        <Star
+                          key={i}
+                          size={14}
+                          className={
+                            isFilled
+                              ? "fill-orange-400 text-orange-400"
+                              : "text-orange-400 opacity-40"
+                          }
+                        />
+                      );
+                    })}
+
+                    <span className="ml-2 text-xs text-gray-500 font-medium">
+                      {deal.rating}
+                    </span>
                   </div>
                 </div>
 
                 <div className="flex justify-between items-center">
                   <span className="text-teal-600 dark:text-teal-400 font-bold text-xl">
-                    {deal.price}.00৳
+                    ৳{deal.price % 1 === 0 ? deal.price.toFixed(2) : deal.price}
                   </span>
                   <Button className="bg-slate-900 dark:bg-orange-500 hover:bg-slate-800 dark:hover:bg-orange-600 text-white text-xs h-9 px-4 font-bold cursor-pointer">
                     <ShoppingCart size={14} /> Buy Now

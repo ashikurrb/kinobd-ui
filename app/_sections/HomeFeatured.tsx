@@ -103,15 +103,26 @@ export default function HomeFeatured() {
                         {product.name}
                       </h3>
 
-                      <div className="flex items-center mb-6">
-                        {[...Array(4)].map((_, i) => (
-                          <Star
-                            key={i}
-                            size={16}
-                            className="fill-[#ffb400] text-[#ffb400]"
-                          />
-                        ))}
-                        <Star size={16} className="text-[#ffb400] opacity-50" />
+                      <div className="flex items-center gap-1 mb-6">
+                          {[...Array(5)].map((_, i) => {
+                            const isFilled = i < Math.floor(product.rating);
+
+                            return (
+                              <Star
+                                key={i}
+                                size={14}
+                                className={
+                                  isFilled
+                                    ? "fill-orange-400 text-orange-400"
+                                    : "text-orange-400 opacity-40"
+                                }
+                              />
+                            );
+                          })}
+
+                          <span className="ml-2 text-xs text-gray-500 font-medium">
+                            {product.rating}
+                          </span>
                       </div>
 
                       <ul className="space-y-2 mb-10 grow">
@@ -130,7 +141,10 @@ export default function HomeFeatured() {
 
                       <div className="flex flex-wrap items-center justify-between gap-6 lg:gap-10 mt-auto">
                         <span className="text-2xl font-semibold text-[#00a99d]">
-                          ৳ {product.price}
+                          ৳{" "}
+                          {product.price % 1 === 0
+                            ? product.price.toFixed(2)
+                            : product.price}
                         </span>
                         <button className="bg-[#ff781f] text-white px-3 py-3 rounded-lg flex items-center gap-2 hover:bg-[#e66a1a] transition-colors font-bold text-sm uppercase tracking-wider shadow-md active:scale-95 cursor-pointer">
                           <ShoppingCart size={18} />
@@ -212,17 +226,22 @@ export default function HomeFeatured() {
 
                     <CardContent className="px-4 space-y-2 grow">
                       <div className="flex items-center gap-0.5">
-                        {[...Array(4)].map((_, i) => (
-                          <Star
-                            key={i}
-                            size={14}
-                            className="fill-orange-400 text-orange-400"
-                          />
-                        ))}
-                        <Star
-                          size={14}
-                          className="text-orange-400 opacity-40"
-                        />
+                        {[...Array(5)].map((_, i) => {
+                          const isFilled = i < Math.floor(product.rating);
+
+                          return (
+                            <Star
+                              key={i}
+                              size={14}
+                              className={
+                                isFilled
+                                  ? "fill-orange-400 text-orange-400"
+                                  : "text-orange-400 opacity-40"
+                              }
+                            />
+                          );
+                        })}
+
                         <span className="ml-2 text-xs text-gray-500 font-medium">
                           {product.rating}
                         </span>
@@ -232,9 +251,12 @@ export default function HomeFeatured() {
                         {product.name}
                       </h3>
 
-                      <p className="font-bold text-lg text-[#00a99d]">
-                        {product.price}৳
-                      </p>
+                      <h3 className="font-bold text-lg text-[#00a99d]">
+                        ৳
+                        {product.price % 1 === 0
+                          ? product.price.toFixed(2)
+                          : product.price}
+                      </h3>
                     </CardContent>
 
                     <CardFooter className="flex justify-between gap-6 px-4 mt-auto">
