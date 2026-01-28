@@ -44,7 +44,7 @@ const ProductSlider = ({ products }: { products: Product[] }) => (
     slidesPerView={1.2}
     breakpoints={{
       640: { slidesPerView: 2 },
-      1024: { slidesPerView: 3 },
+      1024: { slidesPerView: 6 },
     }}
     navigation={{
       prevEl: "#new-arrival-prev",
