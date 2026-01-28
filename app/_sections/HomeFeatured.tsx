@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import {
   ChevronLeft,
@@ -15,91 +15,52 @@ import "swiper/css/navigation";
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardAction,
   CardContent,
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
+import axios from "axios";
+import { toast } from "sonner";
+interface Product {
+  id: string;
+  featuredProduct: boolean;
+  newArrival: boolean;
+}
 
 export default function HomeFeatured() {
-  const featuredProducts = [
-    {
-      id: 1593,
-      name: "Rechargable Wireless Mouse",
-      img: "/banner/mouse.png",
-      price: "120.00",
-      rating: 4.5,
-      features: [
-        "Mauris imperdiet sem arop",
-        "Maecenas vel eros viverra,",
-        "Vivamus sed justo ac arcu c",
-        "Donec eget risus eu eros",
-        "Mauris imperdiet sem tincidunt",
-      ],
-    },
-    {
-      id: 1594,
-      name: "Premium Bluetooth Speaker",
-      img: "/banner/mouse.png",
-      price: "250.00",
-      rating: 5,
-      features: [
-        "High fidelity audio output",
-        "10-hour battery life",
-        "Water resistant IPX7",
-        "Compact portable design",
-        "Bluetooth 5.0 support",
-      ],
-    },
-    {
-      id: 1595,
-      name: "Premium Bluetooth Speaker",
-      img: "/banner/mouse.png",
-      price: "250.00",
-      rating: 5,
-      features: [
-        "High fidelity audio output",
-        "10-hour battery life",
-        "Water resistant IPX7",
-        "Compact portable design",
-        "Bluetooth 5.0 support",
-      ],
-    },
-    {
-      id: 1596,
-      name: "Premium Bluetooth Speaker",
-      img: "/banner/mouse.png",
-      price: "250.00",
-      rating: 5,
-      features: [
-        "High fidelity audio output",
-        "10-hour battery life",
-        "Water resistant IPX7",
-        "Compact portable design",
-        "Bluetooth 5.0 support",
-      ],
-    },
-    {
-      id: 1597,
-      name: "Premium Bluetooth Speaker",
-      img: "/banner/mouse.png",
-      price: "250.00",
-      rating: 5,
-      features: [
-        "High fidelity audio output",
-        "10-hour battery life",
-        "Water resistant IPX7",
-        "Compact portable design",
-        "Bluetooth 5.0 support",
-      ],
-    },
-  ];
+  const [isFeaturedProducts, setIsFeaturedProducts] = useState<Product[]>([]);
+  const [isNewArrivals, setIsNewArrivals] = useState<Product[]>([]);
+
+
+  const getFeaturedProducts = async () => {
+    try {
+      const { data } = await axios.get<Product[]>("/product.json");
+
+      const featured: Product[] = [];
+      const newArrivals: Product[] = [];
+
+      for (const product of data) {
+        if (product.featuredProduct === true) featured.push(product);
+        if (product.newArrival === true) newArrivals.push(product);
+      }
+
+      setIsFeaturedProducts(featured);
+      setIsNewArrivals(newArrivals);
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to fetch products.");
+    }
+  };
+
+  useEffect(() => {
+    getFeaturedProducts();
+  }, []);
 
   return (
-    <div className="lg:px-10 xl:px-20 px-5 py-15 space-y-6 text-slate-900 dark:text-slate-100">
+    <div className="lg:px-10 xl:px-20 px-5 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Featured Product Section */}
         <div>
-          {/* Header Section */}
           <div className="flex justify-between items-end mb-6">
             <h2 className="text-2xl font-bold text-[#1a2d2e] dark:text-white">
               Featured Products
@@ -132,7 +93,7 @@ export default function HomeFeatured() {
               }}
               className="rounded-sm border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm"
             >
-              {featuredProducts.map((product) => (
+              {isFeaturedProducts.map((product) => (
                 <SwiperSlide key={product.id}>
                   <div
                     className="
@@ -159,7 +120,7 @@ export default function HomeFeatured() {
                       </div>
 
                       <ul className="space-y-2 mb-10">
-                        {product.features.map((feature, i) => (
+                        {product.features.map((feature: [], i) => (
                           <li
                             key={i}
                             className="flex items-start gap-3 text-gray-700 dark:text-gray-300 font-medium"
@@ -203,7 +164,7 @@ export default function HomeFeatured() {
           </div>
         </div>
 
-        {/* Second Grid */}
+        {/* New Arrival */}
         <div>
           <div className="flex justify-between items-end mb-6">
             <h2 className="text-2xl font-bold text-[#1a2d2e] dark:text-white">
@@ -241,7 +202,7 @@ export default function HomeFeatured() {
               }}
               className="pb-4"
             >
-              {featuredProducts.map((product) => (
+              {isNewArrivals.map((product) => (
                 <SwiperSlide key={product.id}>
                   <Card className="rounded-sm shadow-none group py-4 min-h-[41vh]">
                     <CardHeader>

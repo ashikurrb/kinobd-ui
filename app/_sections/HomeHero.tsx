@@ -16,34 +16,40 @@ import {
 } from "lucide-react";
 import Countdown, { zeroPad } from "react-countdown";
 import dayjs from "dayjs";
+import { toast } from "sonner";
+import axios from "axios";
 
 export default function HomeHero() {
-  const [isMounted, setIsMounted] = useState(false);
-  useEffect(() => setIsMounted(true), []);
+  const [isDealsOfTheDay, setIsDealsOfTheDay] = useState<any[]>([]);
 
-  if (!isMounted) return null;
   const carouselItems = [
     { img: "/banner/homeBanner1.png", url: "#" },
     { img: "/banner/homeBanner2.png", url: "#" },
     { img: "/banner/homeBanner3.png", url: "#" },
   ];
 
-  const dealsOfTheDay = [
-    {
-      name: "Rechargeable Wireless Mouse",
-      img: "/banner/mouse.png",
-      price: "120",
-      rating: 4,
-      lastTime: "2026-01-29T12:25:40.310+00:00",
-    },
-  ];
+  //fetch deal of the day
+  const getDealOfTheDay = async () => {
+    try {
+      const { data } = await axios.get("/product.json");
+      const deals = data.filter(
+        (product: any) => product.dealsOfTheDay === true,
+      );
+      setIsDealsOfTheDay(deals[0] ? [deals[0]] : []);
+    } catch (error: any) {
+      toast.error("Failed to fetch Deal of the Day.");
+    }
+  };
+
+  //initialize
+  useEffect(() => {
+    getDealOfTheDay();
+  }, []);
 
   return (
     <div className="lg:px-10 xl:px-20 px-5 pt-6 space-y-6 text-slate-900 dark:text-slate-100">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-        {/* Left Column: Carousel + Trust Cards */}
         <div className="lg:col-span-8 w-full flex flex-col gap-6">
-          {/* Carousel */}
           <Carousel
             plugins={[Autoplay({ delay: 4000 })]}
             className="w-full overflow-hidden rounded-sm border dark:border-slate-800"
@@ -146,7 +152,7 @@ export default function HomeHero() {
           <h2 className="text-xl md:text-2xl font-bold mb-6 dark:text-white">
             Deal of the Day
           </h2>
-          {dealsOfTheDay.map((deal, idx) => (
+          {isDealsOfTheDay.map((deal, idx) => (
             <div
               key={idx}
               className="flex flex-col items-center justify-between h-full w-full"
