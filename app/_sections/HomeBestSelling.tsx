@@ -41,14 +41,14 @@ const ProductSlider = ({ products }: { products: Product[] }) => (
   <Swiper
     modules={[Navigation]}
     spaceBetween={15}
-    slidesPerView={2}
+    slidesPerView={1.2}
     breakpoints={{
       640: { slidesPerView: 2 },
-      1024: { slidesPerView: 6 },
+      1024: { slidesPerView: 3 },
     }}
     navigation={{
-      prevEl: "#best-selling-prev",
-      nextEl: "#best-selling-next",
+      prevEl: "#new-arrival-prev",
+      nextEl: "#new-arrival-next",
     }}
     className="pb-4 h-full"
   >
@@ -71,6 +71,7 @@ const ProductSlider = ({ products }: { products: Product[] }) => (
             <div className="flex items-center gap-0.5">
               {[...Array(5)].map((_, i) => {
                 const isFilled = i < Math.floor(product.rating);
+
                 return (
                   <Star
                     key={i}
@@ -83,22 +84,25 @@ const ProductSlider = ({ products }: { products: Product[] }) => (
                   />
                 );
               })}
+
               <span className="ml-2 text-xs text-gray-500 font-medium">
                 {product.rating}
               </span>
             </div>
+
             <h3 className="text-[15px] font-bold dark:text-white text-[#1a2d2e] leading-tight min-h-10 line-clamp-2">
               {product.name}
             </h3>
+
             <h3 className="font-bold text-lg text-[#00a99d]">
-              ৳{" "}
+              ৳
               {product.price % 1 === 0
                 ? product.price.toFixed(2)
                 : product.price}
             </h3>
           </CardContent>
 
-          <CardFooter className="flex justify-between lg:gap-6 gap-3 px-4 mt-auto">
+          <CardFooter className="flex justify-between gap-6 px-4 mt-auto">
             <Button className="flex-1 bg-[#1a2d2e] hover:bg-[#2a3d3e] text-white rounded-sm text-xs gap-2 px-2 cursor-pointer">
               <ShoppingCart size={16} />
               Add to Cart
