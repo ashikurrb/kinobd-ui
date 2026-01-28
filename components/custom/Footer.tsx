@@ -32,13 +32,12 @@ const Footer = () => {
   return (
     <footer className="w-full text-white font-sans">
       <div
-        className="pt-16 pb-12 px-6 md:px-12 lg:px-24"
         style={{
           background:
             "radial-gradient(50% 50% at 50% 50%, #086D67 0%, #032C2A 100%)",
         }}
       >
-        <div className="max-w-7xl mx-auto">
+        <div className="lg:px-30 xl:px-60 px-5 pt-16 pb-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-x-20">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-[#00E5FF]">

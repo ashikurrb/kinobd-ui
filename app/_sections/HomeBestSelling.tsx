@@ -145,7 +145,7 @@ export default function HomeBestSelling() {
   }, []);
 
   return (
-    <div className="lg:px-10 xl:px-20 px-5 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
+    <div className="lg:px-30 xl:px-60 px-5 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
       <div className="flex flex-col h-full">
         <Tabs defaultValue="best-selling">
           <div className="flex justify-between items-end mb-6">

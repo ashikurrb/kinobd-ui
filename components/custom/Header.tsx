@@ -51,7 +51,7 @@ export default function Header() {
   return (
     <header className="w-full bg-white dark:bg-zinc-950 sticky top-0 z-50 shadow-sm">
       {/* Top Section */}
-      <div className="flex items-center justify-between px-4 py-3 lg:px-20 lg:py-4 max-w-480 mx-auto">
+      <div className="flex items-center justify-between px-4 py-3 lg:px-20 xl:px-60 lg:py-4 max-w-480 mx-auto">
         {/* Mobile Menu Trigger */}
         <div className="lg:hidden">
           <Sheet>
@@ -248,7 +248,7 @@ export default function Header() {
 
       {/* Bottom Nav */}
       <div className="hidden lg:block bg-[#112d2a] text-white w-full">
-        <div className="flex items-center justify-between px-20 py-3 max-w-480 mx-auto">
+        <div className="flex items-center justify-between px-20 xl:px-60 py-3 max-w-480 mx-auto">
           <nav className="flex items-center gap-1">
             {navLinks.map((link, idx) => (
               <div key={link.name} className="flex items-center">
