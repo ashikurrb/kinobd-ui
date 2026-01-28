@@ -16,8 +16,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "kinobd - E-Commerce Platform",
-  description: "An E-Commerce Platform for business in online world",
+  title: "KinoBD - E-Commerce Platform",
+  description: "The largest E-Commerce Shop in Bangladesh",
+  manifest: "/manifest.json",
+  themeColor: "#ff6900",
+  icons: {
+    icon: "/kinobdlogo.png",
+    apple: "/kinobdlogo.png",
+  },
 };
 
 export default function RootLayout({

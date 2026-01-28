@@ -1,0 +1,22 @@
+{
+    "name": "KinoBD - The largest E-Commerce Shop in Bangladesh",
+    "short_name": "KinoBD",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ff6900",
+    "theme_color": "#ff6900",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/kinobdlogo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/kinobdlogo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "description": "The largest E-Commerce Shop in Bangladesh."
+}

@@ -153,7 +153,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Strip */}
-      <div className="bg-[#021F1E] py-6 px-6 md:px-12 lg:px-24">
+      <div className="bg-[#021F1E] py-6 px-6 md:px-12 lg:px-30">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-sm tracking-wide text-slate-400 gap-4">
           <p className="text-center md:text-left">
             &copy; Copyright {new Date().getFullYear()} &nbsp;
