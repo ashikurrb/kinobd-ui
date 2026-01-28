@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -28,31 +29,50 @@ import {
   User,
   LogOut,
   LocateFixed,
+  MoreHorizontal,
 } from "lucide-react";
 import { ThemeToggle } from "../ui/theme-toggle";
 import { Badge } from "../ui/badge";
 
 export default function Header() {
+  const pathname = usePathname();
   const [selectedOption, setSelectedOption] = useState("All");
   const [query, setQuery] = useState("");
   const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Electronic", href: "/electronic" },
+    { name: "Electronics", href: "/electronics" },
     { name: "Apparel", href: "/apparel" },
-    { name: "Home Appliance", href: "/appliances" },
-    { name: "Gadget", href: "/gadgets" },
+    { name: "Home Appliances", href: "/appliances" },
+    { name: "Gadgets", href: "/gadgets" },
     { name: "Grocery", href: "/grocery" },
-    { name: "About", href: "/about" },
+    { name: "Sports", href: "/sports" },
+    { name: "Toys", href: "/toys" },
+    { name: "Books", href: "/books" },
+    { name: "Stationery", href: "/stationery" },
+    { name: "Furniture", href: "/furniture" },
+    { name: "Kitchenware", href: "/kitchenware" },
+    { name: "Beauty & Health", href: "/beauty-health" },
+    { name: "Automotive", href: "/automotive" },
+    { name: "Music", href: "/music" },
+    { name: "Movies", href: "/movies" },
+    { name: "Pets", href: "/pets" },
+    { name: "Travel", href: "/travel" },
+    { name: "Gaming", href: "/gaming" },
+    { name: "Hello Bangladesh", href: "/hello-bangladesh" },
     { name: "Contact", href: "/contact" },
   ];
 
+  const visibleLinksCount = 8;
+  const visibleLinks = navLinks.slice(0, visibleLinksCount);
+  const remainingLinks = navLinks.slice(visibleLinksCount);
+
+  const isMoreActive = remainingLinks.some((link) => pathname === link.href);
+
   return (
     <header className="w-full bg-white dark:bg-zinc-950 sticky top-0 z-50 shadow-sm">
-      {/* Top Section */}
       <div className="flex items-center justify-between px-4 py-3 lg:px-20 xl:px-60 lg:py-4 max-w-480 mx-auto">
-        {/* Mobile Menu Trigger */}
         <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -75,20 +95,24 @@ export default function Header() {
                 <span className="text-xs font-bold uppercase text-muted-foreground">
                   Categories
                 </span>
-                {navLinks.map((link) => (
+                {navLinks.map((link, idx) => (
                   <Link
-                    key={link.name}
+                    key={`${link.name}-${idx}`}
                     href={link.href}
-                    className="text-lg font-medium hover:text-[#21b1ad] py-2 border-b border-zinc-100 dark:border-zinc-800"
+                    className={`text-lg font-medium px-3 py-2 rounded-lg transition-colors ${
+                      pathname === link.href
+                        ? "bg-[#ff8a3d]"
+                        : "hover:text-[#21b1ad]"
+                    }`}
                   >
                     {link.name}
                   </Link>
                 ))}
-                <Button className="mt-4 bg-[#112d2a] w-full dark:text-white">
+              </div>
+              <SheetFooter className="border-t">
+                <Button className="mb-2 bg-[#112d2a] w-full dark:text-white">
                   <LocateFixed /> Track My Order
                 </Button>
-              </div>
-              <SheetFooter>
                 <div className="w-full flex justify-between items-center">
                   <span className="text-sm font-semibold">
                     &copy; {new Date().getFullYear()} kinobd.com{" "}
@@ -100,7 +124,6 @@ export default function Header() {
           </Sheet>
         </div>
 
-        {/* Logo */}
         <div className="shrink-0">
           <Link href="/">
             <Image
@@ -114,7 +137,6 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Desktop Search Bar */}
         <div className="hidden lg:flex items-center flex-1 max-w-2xl mx-10 border border-zinc-200 dark:border-zinc-800 rounded-full h-11 overflow-hidden">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -154,7 +176,6 @@ export default function Header() {
           </Button>
         </div>
 
-        {/* Desktop & Mobile Actions */}
         <div className="flex items-center gap-3 lg:gap-6">
           <button
             className="lg:hidden p-2"
@@ -183,7 +204,6 @@ export default function Header() {
             </Badge>
           </div>
 
-          {/* User Profile - Mobile & Desktop */}
           <div className="flex items-center gap-2 lg:gap-3 lg:pl-4 lg:border-l lg:border-zinc-200 h-10">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -231,7 +251,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Search Input*/}
       {isMobileSearchOpen && (
         <div className="lg:hidden px-4 pb-3 animate-in slide-in-from-top duration-200">
           <div className="flex items-center border rounded-full overflow-hidden h-10">
@@ -250,19 +269,65 @@ export default function Header() {
       <div className="hidden lg:block bg-[#112d2a] text-white w-full">
         <div className="flex items-center justify-between px-20 xl:px-60 py-3 max-w-480 mx-auto">
           <nav className="flex items-center gap-1">
-            {navLinks.map((link, idx) => (
-              <div key={link.name} className="flex items-center">
-                <Link
-                  href={link.href}
-                  className={`text-sm font-semibold hover:text-[#21b1ad] transition-colors px-2 ${link.name === "Home" ? "text-white" : "text-zinc-300"}`}
-                >
-                  {link.name}
-                </Link>
-                {idx !== navLinks.length - 1 && (
-                  <span className="text-zinc-600 mx-2 text-xs">|</span>
-                )}
-              </div>
-            ))}
+            {visibleLinks.map((link, idx) => {
+              const isActive = pathname === link.href;
+              return (
+                <div key={`${link.name}-${idx}`} className="flex items-center">
+                  <Link
+                    href={link.href}
+                    className={`font-semibold transition-all px-3 py-1 rounded-md ${
+                      isActive
+                        ? "bg-[#ff8a3d] text-white"
+                        : "text-zinc-300 hover:text-white"
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                  {(idx !== visibleLinks.length - 1 ||
+                    remainingLinks.length > 0) && (
+                    <span className="text-zinc-600 mx-1 text-xs">|</span>
+                  )}
+                </div>
+              );
+            })}
+
+            {remainingLinks.length > 0 && (
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <button
+                    className={`flex items-center px-3 py-1 rounded-md transition-all cursor-pointer outline-none ${
+                      isMoreActive
+                        ? "bg-[#ff8a3d] text-white"
+                        : "text-zinc-300 hover:text-white"
+                    }`}
+                  >
+                    <MoreHorizontal className="h-5 w-5" />
+                  </button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="max-h-[80vh] overflow-y-auto bg-[#1c1c1c] text-white border-none">
+                  {remainingLinks.map((link, idx) => (
+                    <DropdownMenuItem
+                      key={`${link.name}-extra-${idx}`}
+                      asChild
+                      className={
+                        pathname === link.href ? "bg-[#ff8a3d] my-1" : ""
+                      }
+                    >
+                      <Link
+                        href={link.href}
+                        className={`font-semibold transition-all px-3 py-1 rounded-md cursor-pointer ${
+                          pathname === link.href
+                            ? "bg-[#ff8a3d] text-white"
+                            : "text-zinc-300 hover:text-white"
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )}
           </nav>
           <Button
             variant="outline"

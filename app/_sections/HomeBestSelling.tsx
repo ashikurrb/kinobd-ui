@@ -47,8 +47,8 @@ const ProductSlider = ({ products }: { products: Product[] }) => (
       1024: { slidesPerView: 6 },
     }}
     navigation={{
-      prevEl: "#new-arrival-prev",
-      nextEl: "#new-arrival-next",
+      prevEl: "#best-selling-prev",
+      nextEl: "#best-selling-next",
     }}
     className="pb-4 h-full"
   >
