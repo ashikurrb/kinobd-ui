@@ -54,7 +54,7 @@ export default function HomeSpecialPeak() {
         Special Peak for You
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full">
+        <div className="grid grid-cols-2 sm:grid-cols-2 gap-4 h-full">
           {isFeaturedProducts.map((product) => (
             <Card
               className="rounded-sm shadow-none group flex flex-col h-full"
@@ -68,8 +68,8 @@ export default function HomeSpecialPeak() {
                 )}
               </CardHeader>
 
-              <CardContent className="space-y-2 grow mt-0">
-                <div className="relative aspect-square flex items-center justify-center overflow-hidden">
+              <CardContent className="space-y-2 grow">
+                <div className="relative aspect-square flex text-center items-center justify-center overflow-hidden">
                   <Image
                     src={product.img}
                     alt={product.name}
@@ -99,11 +99,11 @@ export default function HomeSpecialPeak() {
                 </div>
               </CardContent>
 
-              <CardFooter className="flex flex-wrap justify-between items-center gap-2">
+              <CardFooter className="flex lg:flex-row flex-col flex-wrap justify-between lg:items-center items-end gap-2">
                 <h3 className="font-bold text-lg text-[#00a99d]">
                   ৳{product.price.toLocaleString()}
                 </h3>
-                <div className="flex items-center gap-2 flex-1 justify-end">
+                <div className="flex items-center gap-8 lg:gap-2 flex-1 justify-end">
                   <Button className="bg-[#1a2d2e] hover:bg-[#2a3d3e] text-white rounded-sm text-md gap-1 px-2 cursor-pointer">
                     <ShoppingCart size={14} />
                     Add
