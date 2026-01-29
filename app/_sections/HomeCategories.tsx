@@ -46,7 +46,7 @@ export default function HomeCategories() {
   }, []);
 
   return (
-    <div className="lg:px-30 xl:px-60 px-5 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
+    <div className="lg:pt-25 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
       {/* Header with Navigation Arrows */}
       <div className="flex justify-between items-end mb-6">
         <h2 className="text-2xl font-bold text-[#1a2d2e] dark:text-white">

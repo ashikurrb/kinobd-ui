@@ -147,14 +147,14 @@ export default function Header() {
                 {selectedOption} <ChevronDown className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start">
-              {["All", "Articles", "Products", "Users"].map((option) => (
+            <DropdownMenuContent align="start" className="max-h-[60vh] overflow-y-auto">
+              {navLinks.map((option, index) => (
                 <DropdownMenuItem
-                  key={option}
-                  onClick={() => setSelectedOption(option)}
+                  key={index}
+                  onClick={() => setSelectedOption(option.name)}
                   className="cursor-pointer"
                 >
-                  {option}
+                  {option.name}
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>

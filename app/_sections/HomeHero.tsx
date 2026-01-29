@@ -48,7 +48,7 @@ export default function HomeHero() {
   }, []);
 
   return (
-    <div className="lg:px-30 xl:px-60 px-5 pt-6 space-y-6 text-slate-900 dark:text-slate-100">
+    <div className="pt-6 space-y-6 text-slate-900 dark:text-slate-100">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
         <div className="lg:col-span-8 w-full flex flex-col gap-6">
           <Carousel

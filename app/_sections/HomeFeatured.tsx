@@ -61,7 +61,7 @@ export default function HomeFeatured() {
   }, []);
 
   return (
-    <div className="lg:px-30 xl:px-60 px-5 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
+    <div className="lg:pt-25 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6 gap-15 items-stretch">
         <div className="flex flex-col h-full">
           <div className="flex justify-between items-end mb-6">
