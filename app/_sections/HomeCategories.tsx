@@ -5,87 +5,45 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { toast } from "sonner";
+import Link from "next/link";
+
+interface Categories {
+  id: string;
+  name: string;
+  image: string;
+  slug: string;
+  createdAt: string;
+  updatedAt: string;
+  subCategories: subCategory[];
+}
+
+interface subCategory {
+  id: string;
+  name: string;
+  image: string;
+  slug: string;
+  createdAt: string;
+  updatedAt: string;
+}
 
 export default function HomeCategories() {
-  const categorys = [
-    {
-      id: 12369,
-      name: "Electronics",
-      href: "#",
-      imageSrc: "/banner/electronics.png",
-      subCategories: [
-        { name: "Phone" },
-        { name: "Gadgets" },
-        { name: "Accessories" },
-      ],
-    },
-    {
-      id: 12370,
-      name: "Apparel",
-      href: "#",
-      imageSrc: "/banner/electronics.png",
-      subCategories: [
-        { name: "Phone" },
-        { name: "Gadgets" },
-        { name: "Accessories" },
-      ],
-    },
-    {
-      id: 12371,
-      name: "Home Appliance",
-      href: "#",
-      imageSrc: "/banner/electronics.png",
-      subCategories: [
-        { name: "Phone" },
-        { name: "Gadgets" },
-        { name: "Accessories" },
-      ],
-    },
-    {
-      id: 12372,
-      name: "Gadget",
-      href: "#",
-      imageSrc: "/banner/electronics.png",
-      subCategories: [
-        { name: "Phone" },
-        { name: "Gadgets" },
-        { name: "Accessories" },
-      ],
-    },
-    {
-      id: 12373,
-      name: "Furniture",
-      href: "#",
-      imageSrc: "/banner/electronics.png",
-      subCategories: [
-        { name: "Phone" },
-        { name: "Gadgets" },
-        { name: "Accessories" },
-      ],
-    },
-    {
-      id: 12374,
-      name: "Building",
-      href: "#",
-      imageSrc: "/banner/electronics.png",
-      subCategories: [
-        { name: "Phone" },
-        { name: "Gadgets" },
-        { name: "Accessories" },
-      ],
-    },
-    {
-      id: 12375,
-      name: "Materials",
-      href: "#",
-      imageSrc: "/banner/electronics.png",
-      subCategories: [
-        { name: "Phone" },
-        { name: "Gadgets" },
-        { name: "Accessories" },
-      ],
-    },
-  ];
+  const [categories, setCategories] = useState<Categories[]>([]);
+
+  const getCategories = async () => {
+    try {
+      const { data } = await axios.get<Categories[]>("/categories.json");
+      setCategories(data);
+    } catch (error) {
+      toast.error("Failed to fetch categories.");
+    }
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
 
   return (
     <div className="lg:px-30 xl:px-60 px-5 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
@@ -125,13 +83,13 @@ export default function HomeCategories() {
         }}
         className="mySwiper"
       >
-        {categorys.map((category) => (
+        {categories.map((category) => (
           <SwiperSlide key={category.id}>
             <div className="flex border border-gray-200 dark:border-gray-700 overflow-hidden bg-white dark:bg-slate-800 shadow-sm h-full rounded-sm">
               {/* Image Section */}
               <div className="w-1/2 overflow-hidden relative min-h-35">
                 <Image
-                  src={category.imageSrc}
+                  src={category.image}
                   alt={category.name}
                   fill
                   className="object-cover"
@@ -150,16 +108,23 @@ export default function HomeCategories() {
                       className="flex items-center text-xs text-gray-600 dark:text-gray-300"
                     >
                       <span className="w-2 h-2 bg-cyan-500 mr-2 shrink-0"></span>
-                      <span className="truncate">{sub.name}</span>
+                      <span className="truncate">
+                        <Link
+                          href={`/category/${category.slug}/${sub.slug}`}
+                          className="hover:underline"
+                        >
+                          {sub.name}
+                        </Link>
+                      </span>
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={category.href}
+                <Link
+                  href={`/category/${category.slug}`}
                   className="mt-2 text-xs text-orange-500 hover:underline font-medium"
                 >
                   More...
-                </a>
+                </Link>
               </div>
             </div>
           </SwiperSlide>
