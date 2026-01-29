@@ -154,13 +154,13 @@ export default function HomeFeatured() {
                     </div>
 
                     <div className="w-full md:w-2/5 relative flex items-center justify-center px-6 pt-8 order-1 md:order-2">
-                      <div className="relative lg:w-full w-1/2 aspect-square max-w-80">
+                      <div className="relative lg:w-full w-3/4 aspect-square max-w-80">
                         <Image
                           src={product.img}
                           alt={product.name}
                           width={304}
                           height={304}
-                          className="object-contain"
+                          className="object-contain aspect-square"
                           priority
                         />
                       </div>

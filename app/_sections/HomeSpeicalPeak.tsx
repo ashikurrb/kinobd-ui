@@ -68,17 +68,17 @@ export default function HomeSpecialPeak() {
                 )}
               </CardHeader>
 
-              <CardContent className="space-y-2 grow">
-                <div className="relative aspect-square flex text-center items-center justify-center overflow-hidden">
+              <CardContent className="space-y-2 grow -my-5 text-center lg:text-start">
+                <div className="relative aspect-square flex items-center justify-center overflow-hidden">
                   <Image
                     src={product.img}
                     alt={product.name}
                     width={150}
                     height={150}
-                    className="w-auto h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                    className="lg:w-auto lg:h-auto w-3/4 object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="text-lg font-bold dark:text-white text-[#1a2d2e] line-clamp-2">
+                <h3 className="lg:text-lg font-bold dark:text-white text-[#1a2d2e] line-clamp-2">
                   {product.name}
                 </h3>
                 <div className="flex items-center gap-0.5">
@@ -100,7 +100,7 @@ export default function HomeSpecialPeak() {
               </CardContent>
 
               <CardFooter className="flex lg:flex-row flex-col flex-wrap justify-between lg:items-center items-end gap-2">
-                <h3 className="font-bold text-lg text-[#00a99d]">
+                <h3 className="font-bold text-xl lg:text-lg text-[#00a99d] lg:pb-0 py-2">
                   ৳{product.price.toLocaleString()}
                 </h3>
                 <div className="flex items-center gap-8 lg:gap-2 flex-1 justify-end">
