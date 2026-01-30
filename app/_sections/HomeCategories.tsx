@@ -88,12 +88,14 @@ export default function HomeCategories() {
             <div className="flex border border-gray-200 dark:border-gray-700 overflow-hidden bg-white dark:bg-slate-800 shadow-sm h-full rounded-sm">
               {/* Image Section */}
               <div className="w-1/2 overflow-hidden relative min-h-35">
-                <Image
-                  src={category.image}
-                  alt={category.name}
-                  fill
-                  className="object-cover"
-                />
+             <Link href={`/category/${category.slug}`}>
+               <Image
+                 src={category.image}
+                 alt={category.name}
+                 fill
+                 className="object-cover"
+               />
+             </Link>
               </div>
 
               {/* Content Section */}

@@ -2,6 +2,7 @@
   {
     "id": "9b7e1d6a-2c9f-4f7c-9b7a-1f0c1c159301",
     "name": "Rechargeable Wireless Mouse",
+    "slug": "rechargeable-wireless-mouse",
     "img": "/items/mouse.png",
     "price": 120.0,
     "discountedPrice": 99.99,
@@ -21,6 +22,7 @@
   {
     "id": "4d8f6c32-8b6a-4e3e-a1a9-159402aa11bc",
     "name": "Premium Bluetooth Speaker",
+    "slug": "premium-bluetooth-speaker",
     "img": "/items/chair.png",
     "price": 250.0,
     "discountedPrice": 199.99,
@@ -40,6 +42,7 @@
   {
     "id": "7f5e91a3-91d2-4d3a-8d9b-159503bb22cd",
     "name": "Mechanical Gaming Keyboard",
+    "slug": "mechanical-gaming-keyboard",
     "img": "/items/keyboard.png",
     "price": 150.0,
     "discountedPrice": 129.99,
@@ -59,6 +62,7 @@
   {
     "id": "104f9d2e-0a1b-4c2d-8e3f-160104cc11aa",
     "name": "Noise Cancelling Headphones",
+    "slug": "noise-cancelling-headphones",
     "img": "/items/headphone.png",
     "price": 300.0,
     "discountedPrice": 249.99,
@@ -78,6 +82,7 @@
   {
     "id": "205a8c1b-1b2c-3d4e-5f6g-160205dd22bb",
     "name": "4K Ultra HD Monitor",
+    "slug": "4k-ultra-hd-monitor",
     "img": "/items/monitor.png",
     "price": 450.0,
     "discountedPrice": 380.0,
@@ -97,6 +102,7 @@
   {
     "id": "306b9d2c-2c3d-4e5f-6g7h-160306ee33cc",
     "name": "Smart Fitness Watch",
+    "slug": "smart-fitness-watch",
     "img": "/items/watch.png",
     "price": 199.0,
     "discountedPrice": 159.99,
@@ -116,6 +122,7 @@
   {
     "id": "407c0e3d-3d4e-5f6g-7h8i-160407ff44dd",
     "name": "External SSD 1TB",
+    "slug": "external-ssd-1tb",
     "img": "/items/mouse.png",
     "price": 130.0,
     "discountedPrice": 110.0,
@@ -135,6 +142,7 @@
   {
     "id": "508d1f4e-4e5f-6g7h-8i9j-160508gg55ee",
     "name": "Webcam 1080p Pro",
+    "slug": "webcam-1080p-pro",
     "img": "/items/shoe.png",
     "price": 85.0,
     "discountedPrice": 69.99,
@@ -154,6 +162,7 @@
   {
     "id": "609e2a5f-5f6g-7h8i-9j0k-160609hh66ff",
     "name": "Wireless Charging Pad",
+    "slug": "wireless-charging-pad",
     "img": "/banner/mouse.png",
     "price": 40.0,
     "discountedPrice": 29.99,
@@ -173,6 +182,7 @@
   {
     "id": "700f3b6g-6g7h-8i9j-0k1l-160710ii77gg",
     "name": "Laptop Cooling Pad",
+    "slug": "laptop-cooling-pad",
     "img": "/items/mouse.png",
     "price": 35.0,
     "discountedPrice": 25.0,
@@ -192,6 +202,7 @@
   {
     "id": "811g4c7h-7h8i-9j0k-1l2m-160811jj88hh",
     "name": "Ergonomic Office Chair",
+    "slug": "ergonomic-office-chair",
     "img": "/items/chair.png",
     "price": 220.0,
     "discountedPrice": 189.99,
@@ -211,6 +222,7 @@
   {
     "id": "922h5d8i-8i9j-0k1l-2m3n-160912kk99ii",
     "name": "USB-C Hub 7-in-1",
+    "slug": "usb-c-hub-7-in-1",
     "img": "/items/bagpack.png",
     "price": 60.0,
     "discountedPrice": 49.99,
@@ -230,6 +242,7 @@
   {
     "id": "033i6e9j-9j0k-1l2m-3n4o-161013ll00jj",
     "name": "Smart Light Bulb Pack",
+    "slug": "smart-light-bulb-pack",
     "img": "/items/tshirt1.png",
     "price": 45.0,
     "discountedPrice": 35.0,
@@ -249,6 +262,7 @@
   {
     "id": "144j7f0k-0k1l-2m3n-4o5p-161114mm11kk",
     "name": "Graphing Calculator Pro",
+    "slug": "graphing-calculator-pro",
     "img": "/items/tshirt2.png",
     "price": 140.0,
     "discountedPrice": 115.0,
@@ -268,6 +282,7 @@
   {
     "id": "255k8g1l-1l2m-3n4o-5p6q-161215nn22ll",
     "name": "Portable Power Bank 20k",
+    "slug": "portable-power-bank-20k",
     "img": "/items/trademil.png",
     "price": 75.0,
     "discountedPrice": 59.99,
@@ -287,6 +302,7 @@
   {
     "id": "366l9h2m-2m3n-4o5p-6q7r-161316oo33mm",
     "name": "Streaming Microphone",
+    "slug": "streaming-microphone",
     "img": "/items/headphone.png",
     "price": 110.0,
     "discountedPrice": 89.99,
@@ -306,6 +322,7 @@
   {
     "id": "477m0i3n-3n4o-5p6q-7r8s-161417pp44nn",
     "name": "Bluetooth Keyboard Case",
+    "slug": "bluetooth-keyboard-case",
     "img": "/items/keyboard.png",
     "price": 95.0,
     "discountedPrice": 75.0,
@@ -325,6 +342,7 @@
   {
     "id": "588n1j4o-4o5p-6q7r-8s9t-161518qq55oo",
     "name": "Mini Projector 1080p",
+    "slug": "mini-projector-1080p",
     "img": "/items/projector.png",
     "price": 280.0,
     "discountedPrice": 220.0,
@@ -344,6 +362,7 @@
   {
     "id": "699o2k5p-5p6q-7r8s-9t0u-161619rr66pp",
     "name": "Electric Standing Desk",
+    "slug": "electric-standing-desk",
     "img": "/items/hijab.png",
     "price": 400.0,
     "discountedPrice": 349.99,
@@ -363,6 +382,7 @@
   {
     "id": "810p3l6q-6q7r-8s9t-0u1v-161720ss77qq",
     "name": "VR Headset Gen 3",
+    "slug": "vr-headset-gen-3",
     "img": "/items/wallet.png",
     "price": 550.0,
     "discountedPrice": 499.0,

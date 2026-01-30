@@ -9,7 +9,14 @@
     "subCategories": [
       { "id": "sub_001", "name": "Mobile Phones", "slug": "mobile-phones", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
       { "id": "sub_002", "name": "Laptops", "slug": "laptops", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
-      { "id": "sub_003", "name": "Accessories", "slug": "accessories", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+      { "id": "sub_003", "name": "Accessories", "slug": "accessories", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_101", "name": "Tablets", "slug": "tablets", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_102", "name": "Cameras", "slug": "cameras", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_103", "name": "Headphones", "slug": "headphones", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_104", "name": "Smart Watches", "slug": "smart-watches", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_105", "name": "Speakers", "slug": "speakers", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_106", "name": "Gaming Consoles", "slug": "gaming-consoles", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_107", "name": "Storage Devices", "slug": "storage-devices", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
     ]
   },
   {
@@ -22,7 +29,14 @@
     "subCategories": [
       { "id": "sub_004", "name": "Men", "slug": "men", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
       { "id": "sub_005", "name": "Women", "slug": "women", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
-      { "id": "sub_006", "name": "Kids", "slug": "kids", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+      { "id": "sub_006", "name": "Kids", "slug": "kids", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_108", "name": "Winter Wear", "slug": "winter-wear", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_109", "name": "Formal Wear", "slug": "formal-wear", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_110", "name": "Activewear", "slug": "activewear", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_111", "name": "Innerwear", "slug": "innerwear", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_112", "name": "Shoes", "slug": "shoes", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_113", "name": "Traditional", "slug": "traditional", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_114", "name": "Watches", "slug": "watches-apparel", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
     ]
   },
   {
@@ -35,7 +49,14 @@
     "subCategories": [
       { "id": "sub_007", "name": "Kitchen", "slug": "kitchen", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
       { "id": "sub_008", "name": "Cleaning", "slug": "cleaning", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
-      { "id": "sub_009", "name": "Cooling", "slug": "cooling", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+      { "id": "sub_009", "name": "Cooling", "slug": "cooling", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_115", "name": "Washing Machines", "slug": "washing-machines", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_116", "name": "Refrigerators", "slug": "refrigerators", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_117", "name": "Microwaves", "slug": "microwaves", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_118", "name": "Ironing", "slug": "ironing", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_119", "name": "Vacuum Cleaners", "slug": "vacuum-cleaners", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_120", "name": "Water Purifiers", "slug": "water-purifiers", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_121", "name": "Sewing Machines", "slug": "sewing-machines", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
     ]
   },
   {
@@ -48,10 +69,16 @@
     "subCategories": [
       { "id": "sub_010", "name": "Sofa", "slug": "sofa", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
       { "id": "sub_011", "name": "Bed", "slug": "bed", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
-      { "id": "sub_012", "name": "Table", "slug": "table", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+      { "id": "sub_012", "name": "Table", "slug": "table", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_122", "name": "Chair", "slug": "chair", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_123", "name": "Wardrobe", "slug": "wardrobe", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_124", "name": "Office Furniture", "slug": "office-furniture", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_125", "name": "Dining", "slug": "dining", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_126", "name": "Outdoor Furniture", "slug": "outdoor-furniture", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_127", "name": "Cabinets", "slug": "cabinets", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_128", "name": "Decor", "slug": "decor", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
     ]
   },
-
   {
     "id": "cat_005",
     "name": "Grocery",
@@ -62,10 +89,16 @@
     "subCategories": [
       { "id": "sub_013", "name": "Rice", "slug": "rice", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
       { "id": "sub_014", "name": "Oil", "slug": "oil", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
-      { "id": "sub_015", "name": "Spices", "slug": "spices", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+      { "id": "sub_015", "name": "Spices", "slug": "spices", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_129", "name": "Beverages", "slug": "beverages", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_130", "name": "Snacks", "slug": "snacks", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_131", "name": "Dairy", "slug": "dairy", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_132", "name": "Bakery", "slug": "bakery", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_133", "name": "Fresh Produce", "slug": "fresh-produce", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_134", "name": "Frozen Food", "slug": "frozen-food", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_135", "name": "Canned Food", "slug": "canned-food", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
     ]
   },
-
   {
     "id": "cat_006",
     "name": "Health & Beauty",
@@ -76,10 +109,16 @@
     "subCategories": [
       { "id": "sub_016", "name": "Skincare", "slug": "skincare", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
       { "id": "sub_017", "name": "Haircare", "slug": "haircare", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
-      { "id": "sub_018", "name": "Personal Care", "slug": "personal-care", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+      { "id": "sub_018", "name": "Personal Care", "slug": "personal-care", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_136", "name": "Makeup", "slug": "makeup", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_137", "name": "Fragrance", "slug": "fragrance", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_138", "name": "Medical Supplies", "slug": "medical-supplies", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_139", "name": "Oral Care", "slug": "oral-care", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_140", "name": "Men's Grooming", "slug": "mens-grooming", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_141", "name": "Vitamins", "slug": "vitamins", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_142", "name": "Bath & Body", "slug": "bath-body", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
     ]
   },
-
   {
     "id": "cat_007",
     "name": "Sports & Outdoors",
@@ -90,10 +129,16 @@
     "subCategories": [
       { "id": "sub_019", "name": "Fitness", "slug": "fitness", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
       { "id": "sub_020", "name": "Outdoor Gear", "slug": "outdoor-gear", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
-      { "id": "sub_021", "name": "Sportswear", "slug": "sportswear", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+      { "id": "sub_021", "name": "Sportswear", "slug": "sportswear", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_143", "name": "Cycling", "slug": "cycling", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_144", "name": "Team Sports", "slug": "team-sports", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_145", "name": "Water Sports", "slug": "water-sports", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_146", "name": "Camping", "slug": "camping", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_147", "name": "Exercise Machines", "slug": "exercise-machines", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_148", "name": "Racket Sports", "slug": "racket-sports", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_149", "name": "Yoga", "slug": "yoga", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
     ]
   },
-
   {
     "id": "cat_008",
     "name": "Automobile",
@@ -104,7 +149,254 @@
     "subCategories": [
       { "id": "sub_022", "name": "Car Accessories", "slug": "car-accessories", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
       { "id": "sub_023", "name": "Motorbike Parts", "slug": "motorbike-parts", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
-      { "id": "sub_024", "name": "Tools", "slug": "tools", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+      { "id": "sub_024", "name": "Tools", "slug": "tools", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_150", "name": "Car Care", "slug": "car-care", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_151", "name": "Tires & Wheels", "slug": "tires-wheels", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_152", "name": "Electronics", "slug": "auto-electronics", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_153", "name": "Lights", "slug": "car-lights", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_154", "name": "Oils & Fluids", "slug": "auto-oils", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_155", "name": "Safety Gear", "slug": "road-safety", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_156", "name": "Helmets", "slug": "helmets", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_009",
+    "name": "Toys & Games",
+    "slug": "toys-games",
+    "image": "/items/schoolbag.jpeg",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_157", "name": "Action Figures", "slug": "action-figures", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_158", "name": "Board Games", "slug": "board-games", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_159", "name": "Dolls", "slug": "dolls", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_160", "name": "Remote Control", "slug": "rc-toys", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_161", "name": "Educational", "slug": "educational-toys", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_162", "name": "Outdoor Toys", "slug": "outdoor-toys", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_163", "name": "Puzzles", "slug": "puzzles", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_164", "name": "Soft Toys", "slug": "soft-toys", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_165", "name": "Art & Craft", "slug": "art-craft", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_166", "name": "Musical Toys", "slug": "musical-toys", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_010",
+    "name": "Books & Stationery",
+    "slug": "books-stationery",
+    "image": "/items/tray.jpg",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_167", "name": "Fiction", "slug": "fiction", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_168", "name": "Non-Fiction", "slug": "non-fiction", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_169", "name": "School Books", "slug": "school-books", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_170", "name": "Notebooks", "slug": "notebooks", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_171", "name": "Pens & Pencils", "slug": "pens-pencils", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_172", "name": "Office Supplies", "slug": "office-supplies", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_173", "name": "Calendars", "slug": "calendars", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_174", "name": "Calculators", "slug": "calculators", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_175", "name": "Greeting Cards", "slug": "greeting-cards", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_176", "name": "Art Supplies", "slug": "art-supplies-pro", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_011",
+    "name": "Pet Supplies",
+    "slug": "pet-supplies",
+    "image": "/items/schoolbag.jpeg",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_177", "name": "Dog Food", "slug": "dog-food", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_178", "name": "Cat Food", "slug": "cat-food", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_179", "name": "Pet Grooming", "slug": "pet-grooming", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_180", "name": "Aquariums", "slug": "aquariums", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_181", "name": "Pet Toys", "slug": "pet-toys", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_182", "name": "Cages", "slug": "cages", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_183", "name": "Pet Health", "slug": "pet-health", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_184", "name": "Collars & Leashes", "slug": "collars", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_185", "name": "Pet Beds", "slug": "pet-beds", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_186", "name": "Bird Food", "slug": "bird-food", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_012",
+    "name": "Kitchenware",
+    "slug": "kitchenware",
+    "image": "/items/tray.jpg",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_187", "name": "Cookware", "slug": "cookware", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_188", "name": "Dinnerware", "slug": "dinnerware", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_189", "name": "Cutlery", "slug": "cutlery", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_190", "name": "Storage", "slug": "kitchen-storage", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_191", "name": "Bakeware", "slug": "bakeware", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_192", "name": "Knives", "slug": "kitchen-knives", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_193", "name": "Glassware", "slug": "glassware", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_194", "name": "Coffee Makers", "slug": "coffee-makers", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_195", "name": "Tools & Gadgets", "slug": "kitchen-gadgets", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_196", "name": "Table Linens", "slug": "table-linens", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_013",
+    "name": "Tools & Hardware",
+    "slug": "tools-hardware",
+    "image": "/items/couchlamp.jpg",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_197", "name": "Hand Tools", "slug": "hand-tools", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_198", "name": "Power Tools", "slug": "power-tools", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_199", "name": "Measuring Tools", "slug": "measuring-tools", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_200", "name": "Electrical", "slug": "electrical-supplies", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_201", "name": "Plumbing", "slug": "plumbing", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_202", "name": "Paints", "slug": "paints", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_203", "name": "Safety Equipment", "slug": "safety-equipment", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_204", "name": "Ladders", "slug": "ladders", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_205", "name": "Fasteners", "slug": "fasteners", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_206", "name": "Garden Tools", "slug": "garden-tools", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_014",
+    "name": "Baby Care",
+    "slug": "baby-care",
+    "image": "/items/schoolbag.jpeg",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_207", "name": "Diapers", "slug": "diapers", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_208", "name": "Baby Food", "slug": "baby-food", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_209", "name": "Strollers", "slug": "strollers", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_210", "name": "Baby Bath", "slug": "baby-bath", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_211", "name": "Baby Clothing", "slug": "baby-clothing", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_212", "name": "Feeding", "slug": "baby-feeding", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_213", "name": "Nursery", "slug": "baby-nursery", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_214", "name": "Baby Safety", "slug": "baby-safety", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_215", "name": "Wipes", "slug": "baby-wipes", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_216", "name": "Pacifiers", "slug": "pacifiers", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_015",
+    "name": "Musical Instruments",
+    "slug": "musical-instruments",
+    "image": "/items/electronics.png",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_217", "name": "Guitars", "slug": "guitars", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_218", "name": "Keyboards", "slug": "keyboards", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_219", "name": "Drums", "slug": "drums", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_220", "name": "Violins", "slug": "violins", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_221", "name": "Wind Instruments", "slug": "wind-instruments", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_222", "name": "Percussion", "slug": "percussion", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_223", "name": "DJ Gear", "slug": "dj-gear", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_224", "name": "Amplifiers", "slug": "amplifiers", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_225", "name": "Microphones", "slug": "music-microphones", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_226", "name": "Music Accessories", "slug": "music-accessories", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_016",
+    "name": "Bags & Luggage",
+    "slug": "bags-luggage",
+    "image": "/items/schoolbag.jpeg",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_227", "name": "Backpacks", "slug": "backpacks", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_228", "name": "Suitcases", "slug": "suitcases", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_229", "name": "Handbags", "slug": "handbags", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_230", "name": "Wallets", "slug": "wallets", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_231", "name": "Duffle Bags", "slug": "duffle-bags", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_232", "name": "Briefcases", "slug": "briefcases", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_233", "name": "Laptop Bags", "slug": "laptop-bags", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_234", "name": "Travel Accessories", "slug": "travel-accessories", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_235", "name": "Crossbody Bags", "slug": "crossbody-bags", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_236", "name": "Messenger Bags", "slug": "messenger-bags", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_017",
+    "name": "Jewelry",
+    "slug": "jewelry",
+    "image": "/items/hijab2.webp",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_237", "name": "Necklaces", "slug": "necklaces", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_238", "name": "Rings", "slug": "rings", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_239", "name": "Earrings", "slug": "earrings", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_240", "name": "Bracelets", "slug": "bracelets", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_241", "name": "Gold Jewelry", "slug": "gold-jewelry", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_242", "name": "Silver Jewelry", "slug": "silver-jewelry", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_243", "name": "Diamond Jewelry", "slug": "diamond-jewelry", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_244", "name": "Brooches", "slug": "brooches", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_245", "name": "Jewelry Boxes", "slug": "jewelry-boxes", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_246", "name": "Watches", "slug": "luxury-watches", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_018",
+    "name": "Office Electronics",
+    "slug": "office-electronics",
+    "image": "/items/electronics.png",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_247", "name": "Printers", "slug": "printers", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_248", "name": "Scanners", "slug": "scanners", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_249", "name": "Projectors", "slug": "projectors", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_250", "name": "Monitors", "slug": "monitors", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_251", "name": "Networking", "slug": "networking-gear", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_252", "name": "Ink & Toner", "slug": "ink-toner", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_253", "name": "Paper Shredders", "slug": "paper-shredders", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_254", "name": "Fax Machines", "slug": "fax-machines", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_255", "name": "Phone Systems", "slug": "office-phones", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_256", "name": "Security Systems", "slug": "office-security", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_019",
+    "name": "Outdoors & Garden",
+    "slug": "outdoors-garden",
+    "image": "/items/couchlamp.jpg",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_257", "name": "Plants", "slug": "live-plants", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_258", "name": "Seeds", "slug": "seeds", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_259", "name": "Fertilizers", "slug": "fertilizers", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_260", "name": "Pots & Planters", "slug": "pots-planters", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_261", "name": "Watering Gear", "slug": "watering-gear", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_262", "name": "Garden Decor", "slug": "garden-decor", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_263", "name": "Barbeque", "slug": "bbq-grills", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_264", "name": "Outdoor Lighting", "slug": "outdoor-lights", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_265", "name": "Bird Feeders", "slug": "bird-feeders", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_266", "name": "Pest Control", "slug": "garden-pest-control", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
+    ]
+  },
+  {
+    "id": "cat_020",
+    "name": "Art & Crafts",
+    "slug": "art-crafts",
+    "image": "/items/tray.jpg",
+    "createdAt": "2026-01-29T00:00:00.000Z",
+    "updatedAt": "2026-01-29T00:00:00.000Z",
+    "subCategories": [
+      { "id": "sub_267", "name": "Painting", "slug": "painting-supplies", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_268", "name": "Drawing", "slug": "drawing-supplies", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_269", "name": "Knitting", "slug": "knitting-crochet", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_270", "name": "Sewing", "slug": "sewing-crafts", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_271", "name": "Beading", "slug": "beading-jewelry", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_272", "name": "Paper Crafts", "slug": "paper-crafts", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_273", "name": "Pottery", "slug": "pottery-ceramics", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_274", "name": "Model Building", "slug": "model-building", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_275", "name": "Fabric Art", "slug": "fabric-art", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" },
+      { "id": "sub_276", "name": "Adhesives", "slug": "craft-adhesives", "image": "/banner/electronics.png", "createdAt": "2026-01-29T00:00:00.000Z", "updatedAt": "2026-01-29T00:00:00.000Z" }
     ]
   }
 ]

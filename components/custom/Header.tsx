@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -33,97 +33,47 @@ import {
 } from "lucide-react";
 import { ThemeToggle } from "../ui/theme-toggle";
 import { Badge } from "../ui/badge";
+import axios from "axios";
+
+interface Categories {
+  id: string;
+  name: string;
+  image: string;
+  slug: string;
+  createdAt: string;
+  updatedAt: string;
+}
 
 export default function Header() {
   const pathname = usePathname();
   const [selectedOption, setSelectedOption] = useState("All");
   const [query, setQuery] = useState("");
-  const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
+  const [categories, setCategories] = useState<Categories[]>([]);
 
-  const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "Electronics", href: "/electronics" },
-    { name: "Apparel", href: "/apparel" },
-    { name: "Home Appliances", href: "/appliances" },
-    { name: "Gadgets", href: "/gadgets" },
-    { name: "Grocery", href: "/grocery" },
-    { name: "Sports", href: "/sports" },
-    { name: "Toys", href: "/toys" },
-    { name: "Books", href: "/books" },
-    { name: "Stationery", href: "/stationery" },
-    { name: "Furniture", href: "/furniture" },
-    { name: "Kitchenware", href: "/kitchenware" },
-    { name: "Beauty & Health", href: "/beauty-health" },
-    { name: "Automotive", href: "/automotive" },
-    { name: "Music", href: "/music" },
-    { name: "Movies", href: "/movies" },
-    { name: "Pets", href: "/pets" },
-    { name: "Travel", href: "/travel" },
-    { name: "Gaming", href: "/gaming" },
-    { name: "Hello Bangladesh", href: "/hello-bangladesh" },
-    { name: "Contact", href: "/contact" },
-  ];
+  const getCategories = async () => {
+    try {
+      const { data } = await axios.get<Categories[]>("/categories.json");
+      setCategories(data);
+    } catch (error) {
+      console.error("Failed to fetch categories.");
+    }
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
 
   const visibleLinksCount = 8;
-  const visibleLinks = navLinks.slice(0, visibleLinksCount);
-  const remainingLinks = navLinks.slice(visibleLinksCount);
+  const visibleLinks = categories.slice(0, visibleLinksCount);
+  const remainingLinks = categories.slice(visibleLinksCount);
 
-  const isMoreActive = remainingLinks.some((link) => pathname === link.href);
+  const isMoreActive = remainingLinks.some(
+    (link) => pathname === `/category/${link.slug}`,
+  );
 
   return (
     <header className="w-full bg-white dark:bg-zinc-950 sticky top-0 z-50 shadow-sm">
       <div className="flex items-center justify-between px-4 py-3 lg:px-20 xl:px-60 lg:py-4 max-w-480 mx-auto">
-        <div className="lg:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-75 sm:w-100 flex flex-col">
-              <SheetHeader className="text-left border-b pb-4 flex-row items-center justify-between">
-                <SheetTitle className="flex items-center gap-2">
-                  <Image
-                    src="/kinobdlogo.svg"
-                    alt="Logo"
-                    width={100}
-                    height={30}
-                  />
-                </SheetTitle>
-              </SheetHeader>
-              <div className="flex flex-col gap-4 px-5 overflow-y-auto">
-                <span className="text-xs font-bold uppercase text-muted-foreground">
-                  Categories
-                </span>
-                {navLinks.map((link, idx) => (
-                  <Link
-                    key={`${link.name}-${idx}`}
-                    href={link.href}
-                    className={`text-lg font-medium px-3 py-2 rounded-lg transition-colors ${
-                      pathname === link.href
-                        ? "bg-[#ff8a3d]"
-                        : "hover:text-[#21b1ad]"
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-              <SheetFooter className="border-t">
-                <Button className="mb-2 bg-[#112d2a] w-full dark:text-white">
-                  <LocateFixed /> Track My Order
-                </Button>
-                <div className="w-full flex justify-between items-center">
-                  <span className="text-sm font-semibold">
-                    &copy; {new Date().getFullYear()} kinobd.com{" "}
-                  </span>
-                  <ThemeToggle />
-                </div>
-              </SheetFooter>
-            </SheetContent>
-          </Sheet>
-        </div>
-
         <div className="shrink-0">
           <Link href="/">
             <Image
@@ -131,7 +81,7 @@ export default function Header() {
               alt="Kinobd Logo"
               width={130}
               height={40}
-              className="lg:w-40"
+              className="w-32 lg:w-40"
               priority
             />
           </Link>
@@ -147,8 +97,11 @@ export default function Header() {
                 {selectedOption} <ChevronDown className="h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="start" className="max-h-[60vh] overflow-y-auto">
-              {navLinks.map((option, index) => (
+            <DropdownMenuContent
+              align="start"
+              className="max-h-[60vh] overflow-y-auto"
+            >
+              {categories.map((option, index) => (
                 <DropdownMenuItem
                   key={index}
                   onClick={() => setSelectedOption(option.name)}
@@ -176,105 +129,160 @@ export default function Header() {
           </Button>
         </div>
 
-        <div className="flex items-center gap-3 lg:gap-6">
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setIsMobileSearchOpen(!isMobileSearchOpen)}
-          >
-            <Search className="h-5 w-5 text-zinc-700 dark:text-zinc-300" />
-          </button>
+        <div className="flex items-center gap-6 lg:gap-6">
+          <div className="flex items-center gap-4">
+            <div className="relative cursor-pointer group">
+              <ShoppingBag className="h-6 w-6 lg:h-7 lg:w-7 text-zinc-700 dark:text-zinc-300" />
+              <Badge
+                variant="secondary"
+                className="bg-yellow-500 absolute lg:px-2 px-1.5 -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 rounded-full text-[10px] lg:text-xs"
+              >
+                1
+              </Badge>
+            </div>
 
-          <div className="relative cursor-pointer group">
-            <ShoppingBag className="h-7 w-7 text-zinc-700 dark:text-zinc-300" />
-            <Badge
-              variant="secondary"
-              className="bg-yellow-500 absolute lg:px-2 px-1.5 -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 rounded-full"
-            >
-              1
-            </Badge>
-          </div>
+            <div className="relative cursor-pointer group hidden sm:block">
+              <Heart className="h-7 w-7 text-zinc-700 dark:text-zinc-300" />
+              <Badge
+                variant="secondary"
+                className="absolute lg:px-2 px-1.5 -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] rounded-full"
+              >
+                1
+              </Badge>
+            </div>
 
-          <div className="relative cursor-pointer group hidden sm:block">
-            <Heart className="h-7 w-7 text-zinc-700 dark:text-zinc-300" />
-            <Badge
-              variant="secondary"
-              className="absolute lg:px-2 px-1.5 -top-1.5 -right-1.5 lg:-top-2 lg:-right-2 bg-[#ff8a3d] rounded-full"
-            >
-              1
-            </Badge>
-          </div>
-
-          <div className="flex items-center gap-2 lg:gap-3 lg:pl-4 lg:border-l lg:border-zinc-200 h-10">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <div
-                  className="flex items-center gap-2 cursor-pointer 
+            <div className="flex items-center gap-2 lg:gap-3 lg:pl-4 lg:border-l lg:border-zinc-200 h-10">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <div
+                    className="flex items-center gap-2 cursor-pointer 
                 border border-transparent hover:border-zinc-300 
                 transition-colors duration-300 lg:px-5 py-1 rounded-lg"
-                >
-                  <button className="h-8 w-8 lg:h-10 lg:w-10 relative outline-none">
-                    <Image
-                      src="/demoAvatar.png"
-                      alt="User"
-                      fill
-                      className="rounded-full object-cover cursor-pointer"
-                    />
-                  </button>
-                  <div className="hidden lg:flex items-center gap-2 text-sm">
-                    <span className="font-bold text-zinc-800 dark:text-zinc-200">
-                      John Doe
-                    </span>
+                  >
+                    <button className="h-6 w-6 lg:h-10 lg:w-10 gap-3 relative outline-none">
+                      <User />
+                    </button>
+                    <div className="hidden lg:flex items-center gap-2 text-sm">
+                      <span className="font-bold text-zinc-800 dark:text-zinc-200">
+                        John Doe
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <div className="px-2 py-1.5 text-sm lg:hidden font-bold text-zinc-800 dark:text-zinc-200">
-                  John Doe
-                </div>
-                <DropdownMenuSeparator className="lg:hidden" />
-                <Link href={"/dashboard/profile"}>
-                  <DropdownMenuItem className="cursor-pointer">
-                    <User className="h-4 w-4" /> Profile
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <div className="px-2 py-1.5 text-sm lg:hidden font-bold text-zinc-800 dark:text-zinc-200">
+                    John Doe
+                  </div>
+                  <DropdownMenuSeparator className="lg:hidden" />
+                  <Link href={"/dashboard/profile"}>
+                    <DropdownMenuItem className="cursor-pointer">
+                      <User className="h-4 w-4" /> Profile
+                    </DropdownMenuItem>
+                  </Link>
+                  <DropdownMenuItem className="cursor-pointer text-red-600 focus:text-red-600">
+                    <button className="flex items-center gap-2 cursor-pointer">
+                      <LogOut className="h-4 w-4" /> Logout
+                    </button>
                   </DropdownMenuItem>
-                </Link>
-                <DropdownMenuItem className="cursor-pointer text-red-600 focus:text-red-600">
-                  <button className="flex items-center gap-2 cursor-pointer">
-                    <LogOut className="h-4 w-4" /> Logout
-                  </button>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
           </div>
+
           <div className="hidden lg:block">
             <ThemeToggle />
+          </div>
+
+          <div className="lg:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Menu className="h-6 w-6" />
+              </SheetTrigger>
+              <SheetContent
+                side="right"
+                className="w-75 sm:w-100 flex flex-col"
+              >
+                <SheetHeader className="text-left border-b pb-4 flex-row items-center justify-between">
+                  <SheetTitle className="flex items-center gap-2">
+                    <Link href="/">
+                      <Image
+                        src="/kinobdlogo.svg"
+                        alt="Logo"
+                        width={100}
+                        height={30}
+                      />
+                    </Link>
+                  </SheetTitle>
+                </SheetHeader>
+                <div className="flex flex-col gap-4 px-5 mt-4 overflow-y-auto">
+                  <span className="text-xs font-bold uppercase text-muted-foreground">
+                    Categories
+                  </span>
+                  {categories.map((link, idx) => (
+                    <Link
+                      key={`${link.name}-${idx}`}
+                      href={`/category/${link.slug}`}
+                      className={`text-lg font-medium px-3 py-2 rounded-lg transition-colors ${
+                        pathname === `/category/${link.slug}`
+                          ? "bg-[#ff8a3d] text-white"
+                          : "hover:text-[#21b1ad]"
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+                <SheetFooter className="mt-auto border-t pt-4">
+                  <Button className="mb-2 bg-[#112d2a] w-full dark:text-white">
+                    <LocateFixed className="mr-2 h-4 w-4" /> Track My Order
+                  </Button>
+                  <div className="w-full flex justify-between items-center px-2">
+                    <span className="text-xs font-semibold">
+                      &copy; {new Date().getFullYear()} kinobd.com{" "}
+                    </span>
+                    <ThemeToggle />
+                  </div>
+                </SheetFooter>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
 
-      {isMobileSearchOpen && (
-        <div className="lg:hidden px-4 pb-3 animate-in slide-in-from-top duration-200">
-          <div className="flex items-center border rounded-full overflow-hidden h-10">
-            <Input
-              className="border-0 focus-visible:ring-0"
-              placeholder="Search..."
-            />
-            <Button className="bg-[#21b1ad] rounded-none h-full">
-              <Search className="h-4 w-4" />
-            </Button>
-          </div>
+      <div className="lg:hidden px-4 pb-3">
+        <div className="flex items-center border rounded-full overflow-hidden h-10">
+          <Input
+            className="border-0 focus-visible:ring-0 text-sm"
+            placeholder="Search..."
+          />
+          <Button className="bg-[#21b1ad] rounded-none h-full px-4">
+            <Search className="h-4 w-4" />
+          </Button>
         </div>
-      )}
+      </div>
 
-      {/* Bottom Nav */}
       <div className="hidden lg:block bg-[#112d2a] text-white w-full">
         <div className="flex items-center justify-between px-20 xl:px-60 py-3 max-w-480 mx-auto">
           <nav className="flex items-center gap-1">
+            <Link
+              href="/"
+              className={`px-3 py-1 font-semibold rounded-md ${
+                pathname === "/"
+                  ? "bg-[#ff8a3d]"
+                  : "text-zinc-300 hover:text-white"
+              }`}
+            >
+              Home
+            </Link>
+
+            <span className="text-zinc-600 mx-1 text-xs">|</span>
+
             {visibleLinks.map((link, idx) => {
-              const isActive = pathname === link.href;
+              const isActive = pathname === `/category/${link.slug}`;
               return (
                 <div key={`${link.name}-${idx}`} className="flex items-center">
                   <Link
-                    href={link.href}
+                    href={`/category/${link.slug}`}
                     className={`font-semibold transition-all px-3 py-1 rounded-md ${
                       isActive
                         ? "bg-[#ff8a3d] text-white"
@@ -306,19 +314,13 @@ export default function Header() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="max-h-[80vh] overflow-y-auto bg-[#1c1c1c] text-white border-none">
                   {remainingLinks.map((link, idx) => (
-                    <DropdownMenuItem
-                      key={`${link.name}-extra-${idx}`}
-                      asChild
-                      className={
-                        pathname === link.href ? "bg-[#ff8a3d] my-1" : ""
-                      }
-                    >
+                    <DropdownMenuItem key={`${link.name}-extra-${idx}`} asChild>
                       <Link
-                        href={link.href}
-                        className={`font-semibold transition-all px-3 py-1 rounded-md cursor-pointer ${
-                          pathname === link.href
+                        href={`/category/${link.slug}`}
+                        className={`w-full font-semibold transition-all px-3 py-2 rounded-md cursor-pointer block ${
+                          pathname === `/category/${link.slug}`
                             ? "bg-[#ff8a3d] text-white"
-                            : "text-zinc-300 hover:text-white"
+                            : "text-zinc-300 hover:bg-zinc-800"
                         }`}
                       >
                         {link.name}
@@ -334,7 +336,7 @@ export default function Header() {
             className="border-white/40 bg-transparent hover:bg-orange-600 
             hover:text-white text-xs font-bold rounded-lg px-4 h-8 cursor-pointer"
           >
-            <LocateFixed /> Track My Order
+            <LocateFixed className="mr-2 h-4 w-4" /> Track My Order
           </Button>
         </div>
       </div>
