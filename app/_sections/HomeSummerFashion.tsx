@@ -62,19 +62,16 @@ export default function HomeSummerFashion() {
   return (
     <div className="lg:pt-25 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6 gap-15 items-stretch">
-        <div className="flex flex-col h-full w-full">
-          <div className="hidden lg:block h-8 mb-6"></div>
+        <div className="flex flex-col h-full">
+          <div className="mb-6 h-8 hidden lg:block"></div>
 
-          <div
-            className="relative grow rounded-sm overflow-hidden 
-          bg-[url('/layer3.png')] bg-no-repeat bg-cover bg-center 
-          flex flex-col md:flex-row items-center justify-between"
-          >
+          <div className="relative grow rounded-sm overflow-hidden bg-[url('/layer3.png')] bg-fit bg-no-repeat bg-cover flex flex-col md:flex-row items-center justify-between p-8 lg:p-12 md:min-h-100 lg:min-h-100">
             <div className="absolute inset-0 ring-1 ring-inset ring-black/5 pointer-events-none"></div>
 
-            <div className="z-10 flex flex-col items-center text-center md:items-start md:text-left space-y-4 w-full md:w-1/2 p-8 lg:p-12">
+            {/* Text Content */}
+            <div className="z-10 flex flex-col items-center text-center md:items-start md:text-left space-y-4 w-full md:w-1/2">
               <div className="space-y-1">
-                <h2 className="text-3xl sm:text-6xl lg:text-6xl font-black text-black leading-tight">
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-black leading-tight">
                   15% OFF
                 </h2>
                 <p className="text-sm lg:text-lg font-bold text-gray-800 tracking-wide uppercase">
@@ -82,17 +79,17 @@ export default function HomeSummerFashion() {
                 </p>
               </div>
 
-              <button className="mt-4 px-8 lg:px-10 py-3 border-2 border-slate-900 text-slate-900 rounded-full font-bold text-lg hover:bg-slate-900 hover:text-white transition-all duration-300">
+              <button className="mt-4 px-8 lg:px-10 py-2 border-2 border-slate-900 text-slate-900 rounded-full font-bold text-lg hover:bg-slate-900 hover:text-white transition-all duration-300">
                 Shop now
               </button>
             </div>
 
-            <div className="relative w-full md:w-1/2 h-64 md:h-full">
+            <div className="relative mt-8 md:mt-0 w-full md:w-1/2 h-64 md:h-full min-h-[8vh]">
               <Image
-                src="/items/lady.png"
-                alt="Lady Promotion"
+                src="/items/chair.png"
+                alt="Smartwatch Promotion"
                 fill
-                className="object-contain object-bottom md:object-bottom-right"
+                className="object-contain object-center md:object-right"
                 priority
               />
             </div>

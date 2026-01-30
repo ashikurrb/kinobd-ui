@@ -171,7 +171,7 @@ export default function HomeGearUp() {
         <div className="flex flex-col h-full order-1 md:order-2">
           <div className="mb-6 h-8 hidden lg:block"></div>
 
-          <div className="relative grow rounded-sm overflow-hidden bg-[url('/layer2.png')] bg-no-repeat bg-cover bg-center flex flex-col md:flex-row items-center justify-between p-8 lg:p-12 md:min-h-100 lg:min-h-100">
+          <div className="relative grow rounded-sm overflow-hidden bg-[url('/layer2.png')] bg-fit bg-no-repeat bg-cover flex flex-col md:flex-row items-center justify-between p-8 lg:p-12 md:min-h-100 lg:min-h-100">
             <div className="absolute inset-0 ring-1 ring-inset ring-black/5 pointer-events-none"></div>
 
             {/* Text Content */}
