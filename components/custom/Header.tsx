@@ -55,7 +55,7 @@ export default function Header() {
       const { data } = await axios.get<Categories[]>("/categories.json");
       setCategories(data);
     } catch (error) {
-      console.error("Failed to fetch categories.");
+      console.error("Failed to fetch categories.", error);
     }
   };
 
@@ -151,11 +151,11 @@ export default function Header() {
               </Badge>
             </div>
 
-            <div className="flex items-center gap-2 lg:gap-3 lg:pl-4 lg:border-l lg:border-zinc-200 h-10">
+            <div className="flex items-center gap-2 lg:gap-3 lg:pl-4 lg:border-zinc-200 h-10">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <div
-                    className="flex items-center gap-2 cursor-pointer 
+                    className="flex items-center cursor-pointer 
                 border border-transparent hover:border-zinc-300 
                 transition-colors duration-300 lg:px-5 py-1 rounded-lg"
                   >
@@ -170,7 +170,13 @@ export default function Header() {
                   </div>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
-                  <div className="px-2 py-1.5 text-sm lg:hidden font-bold text-zinc-800 dark:text-zinc-200">
+                  <div className="px-2 py-1.5 text-sm lg:hidden font-bold text-zinc-800 dark:text-zinc-200 flex items-center gap-2">
+                    <Image
+                      alt="DP"
+                      src="/demoAvatar.png"
+                      width={25}
+                      height={25}
+                    />
                     John Doe
                   </div>
                   <DropdownMenuSeparator className="lg:hidden" />
