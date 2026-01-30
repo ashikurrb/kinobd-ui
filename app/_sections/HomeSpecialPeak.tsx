@@ -34,7 +34,6 @@ export default function HomeSpecialPeak() {
       const featured: Product[] = data.filter(
         (product) => product.featuredProduct === true,
       );
-      // Logic: Take slice 30-34 if available, otherwise 0-4
       setIsFeaturedProducts(
         featured.length >= 34 ? featured.slice(30, 34) : featured.slice(0, 4),
       );
@@ -63,12 +62,16 @@ export default function HomeSpecialPeak() {
               <CardHeader>
                 {product.discountedPrice < product.price && (
                   <Badge variant={"destructive"}>
-                    {Math.round(((product.price - product.discountedPrice) / product.price) * 100)}% OFF
+                    {Math.round(
+                      ((product.price - product.discountedPrice) /
+                        product.price) *
+                        100,
+                    )}
+                    % OFF
                   </Badge>
                 )}
               </CardHeader>
-
-              <CardContent className="space-y-2 grow -my-5 text-center lg:text-start">
+              <CardContent className="flex flex-col space-y-3 grow my-0 p-4 text-center lg:text-start">
                 <div className="relative aspect-square flex items-center justify-center overflow-hidden">
                   <Image
                     src={product.img}
@@ -81,7 +84,7 @@ export default function HomeSpecialPeak() {
                 <h3 className="lg:text-lg font-bold dark:text-white text-[#1a2d2e] line-clamp-2">
                   {product.name}
                 </h3>
-                <div className="flex items-center gap-0.5">
+                <div className="flex items-center justify-center lg:justify-start gap-0.5">
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
@@ -100,7 +103,7 @@ export default function HomeSpecialPeak() {
               </CardContent>
 
               <CardFooter className="flex lg:flex-row flex-col flex-wrap justify-between lg:items-center items-end gap-2">
-                <h3 className="font-bold text-xl lg:text-lg text-[#00a99d] lg:pb-0 py-2">
+                <h3 className="font-bold text-xl lg:text-2xl text-[#00a99d] lg:pb-0 py-2">
                   ৳{product.price.toLocaleString()}
                 </h3>
                 <div className="flex items-center gap-8 lg:gap-2 flex-1 justify-end">

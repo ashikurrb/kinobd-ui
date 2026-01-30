@@ -6,7 +6,7 @@ import HomeGearUp from "./_sections/HomeGearUp";
 import HomeHero from "./_sections/HomeHero";
 import HomeMegaSell from "./_sections/HomeMegaSell";
 import HomeNewsletter from "./_sections/HomeNewsletter";
-import HomeSpecialPeak from "./_sections/HomeSpeicalPeak";
+import HomeSpecialPeak from "./_sections/HomeSpecialPeak";
 import HomeSummerFashion from "./_sections/HomeSummerFashion";
 
 export default function Home() {
