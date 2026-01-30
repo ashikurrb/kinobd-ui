@@ -62,7 +62,7 @@ export default function HomeGearUp() {
   return (
     <div className="lg:pt-25 pt-15 space-y-6 text-slate-900 dark:text-slate-100">
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6 gap-15 items-stretch">
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full order-2 md:order-1">
           <div className="flex justify-between items-end mb-6">
             <h2 className="text-2xl font-bold text-[#1a2d2e] dark:text-white">
               Gear up to get Fit
@@ -168,7 +168,7 @@ export default function HomeGearUp() {
             </Swiper>
           </div>
         </div>
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full order-1 md:order-2">
           <div className="mb-6 h-8 hidden lg:block"></div>
 
           <div className="relative grow rounded-sm overflow-hidden bg-[url('/layer2.png')] bg-no-repeat bg-cover bg-center flex flex-col md:flex-row items-center justify-between p-8 lg:p-12 md:min-h-100 lg:min-h-100">
