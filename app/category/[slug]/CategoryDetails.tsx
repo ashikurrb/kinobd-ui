@@ -6,6 +6,22 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ArrowRight } from "lucide-react";
 
+// Interfaces
+interface subCategory {
+  id: string;
+  name: string;
+  image: string;
+  slug: string;
+}
+
+interface Categories {
+  id: string;
+  name: string;
+  image: string;
+  slug: string;
+  subCategories: subCategory[];
+}
+
 export default function CategoryDetails({ slug }: { slug: string }) {
   const [category, setCategory] = useState<Category | null>(null);
   const [loading, setLoading] = useState(true);
