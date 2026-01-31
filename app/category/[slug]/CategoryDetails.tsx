@@ -23,12 +23,12 @@ interface Categories {
 }
 
 export default function CategoryDetails({ slug }: { slug: string }) {
-  const [category, setCategory] = useState<Category | null>(null);
+  const [category, setCategory] = useState<Categories | null>(null);
   const [loading, setLoading] = useState(true);
 
   const getCategory = async () => {
     try {
-      const { data } = await axios.get<Category[]>("/categories.json");
+      const { data } = await axios.get<Categories[]>("/categories.json");
       const matchedCategory = data.find((item) => item.slug === slug);
       setCategory(matchedCategory || null);
     } catch (error) {
@@ -44,7 +44,7 @@ export default function CategoryDetails({ slug }: { slug: string }) {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-[400px]">
+      <div className="flex justify-center items-center min-h-100">
         <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-slate-900"></div>
       </div>
     );
