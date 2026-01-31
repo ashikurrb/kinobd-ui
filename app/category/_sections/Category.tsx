@@ -49,7 +49,7 @@ export default function Category() {
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-full hover:bg-white hover:shadow-sm transition-all"
+            className="rounded-full hover:bg-white hover:shadow-sm transition-all cursor-pointer"
             onClick={() => window.history.back()}
           >
             <ChevronLeft className="w-5 h-5 text-slate-600" />
